@@ -1,7 +1,8 @@
 .header .container {
-  border-bottom: 0.5px solid rgba(247, 247, 247, 0.2);
+  border-bottom: 5px solid rgba(229, 19, 19, 0.918);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 // .header__nav
@@ -12,6 +13,7 @@
 
   &__list {
     display: flex;
+    gap: 32px;
 
   }
 
@@ -21,11 +23,28 @@
 
   // .header__link
 
-  &__link {}
+  &__link {
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+
+
+    font-size: 14px;
+    line-height: 1.29;
+    /* identical to box height, or 129% */
+  
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  
+    color: #050404;}
 
   // .header__media
 
-  &__media {}
+  &__media {
+    display: flex;
+    gap: 16px;
+  
+  }
 
   // .header__icon
 
@@ -39,9 +58,30 @@
 
   // .logo__link
 
-  &__link {}
+  &__link {
+    text-align: center;
+    font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      /* identical to box height, or 120% */
+    
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    
+      color: #040404;
+  }
 
   // .logo__text
 
-  &__text {}
+  &__text {
+    font-weight: 400;
+      font-size: 8px;
+      line-height: 10px;
+      /* identical to box height, or 125% */
+    
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    
+      color: #010101;
+  }
 }
