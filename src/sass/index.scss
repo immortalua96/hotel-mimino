@@ -16,16 +16,16 @@
 
 
 // Restaurant Page
-@import './components/hero-rest';
-@import './components/about';
-@import './components/rest-menu';
+@import './restaurant-page/hero-rest';
+@import './restaurant-page/about';
+@import './restaurant-page/rest-menu';
 // Hotel Page
-@import './components/hero-hotel';
-@import './components/luxury';
-@import './components/triple';
-@import './components/seater';
+@import './hotel-page/hero-hotel';
+@import './hotel-page/luxury';
+@import './hotel-page/triple';
+@import './hotel-page/seater';
 // Room Page
-@import './components/hero-room';
-@import './components/amenites';
+@import './room-page/hero-room';
+@import './room-page/amenites';
 // footer
 @import './footer/footer';
