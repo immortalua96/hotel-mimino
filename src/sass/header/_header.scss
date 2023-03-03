@@ -1,1 +1,47 @@
+.header .container {
+  border-bottom: 0.5px solid rgba(247, 247, 247, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
 
+// .header__nav
+.header {
+  &__nav {}
+
+  // .header__list
+
+  &__list {
+    display: flex;
+
+  }
+
+  // .header__item
+
+  &__item {}
+
+  // .header__link
+
+  &__link {}
+
+  // .header__media
+
+  &__media {}
+
+  // .header__icon
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.logo {
+
+  // .logo__link
+
+  &__link {}
+
+  // .logo__text
+
+  &__text {}
+}
