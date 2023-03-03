@@ -1,0 +1,398 @@
+.html {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color-primary);
+    font-size: 14px;
+    font-family: var(--font-primary);
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+}
+
+.section {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+:root {
+    --font-primary: 'DM Sans', sans-serif;
+
+    --text-color-primary: #121212;
+    --text-color-secondary: #F7F7F7;
+
+    --bg-color-dark: #121212;
+    --bg-color-light: #F7F7F7;
+    --bg-color-white: #FFFFFF;
+
+    --border-color-dark: #121212;
+    --border-color-light: #F7F7F7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rest-about-text1 {
+
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+margin-top: 32px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    width: 334px;
+    color: var(--text-color-primary);
+    padding: 0;
+
+}
+
+.rest-about-text2 {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+margin-top: 32px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    width: 453px;
+    color: var(--text-color-primary);
+padding: 0;
+
+}
+
+.rest-about-small {
+    display: flex;
+    gap: 32px;
+
+}
+
+.rest-about-all {
+    display: flex;
+    gap: 32px;
+    position: relative;
+
+}
+
+.rest-about-li {
+
+
+    max-width: 335px;
+
+}
+
+.rest-about-text {
+
+    display: flex;
+    right: 57px;
+    bottom: 0;
+    gap: 36px;
+}
+
+
+@media screen and (min-width: 1400px) {
+
+
+    .rest-about-text {
+        display: none;
+
+        right: 57px;
+        bottom: 0;
+        gap: 36px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1439px) {
+
+
+    .rest-about-none {
+        display: none;
+
+    }
+
+
+}
+
+
+.rest-about-photos {
+
+
+    display: flex;
+    gap: 32px;
+
+
+}
+
+.rest-about-chef {
+    width: 511px;
+    height: 598px;
+    display: block;
+
+
+}
+
+.rest-about-food {
+    display: block;
+    width: 334px;
+    height: 389px;
+
+}
+
+
+.rest-about-drinks {
+    display: block;
+    width: 467px;
+    height: 389px;
+}
+
+
+.rest-about-list-styles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:767px) {
+
+    .container {
+        min-width: 320px;
+        height: auto;
+
+
+
+    }
+
+    .rest-about-chef {
+
+        max-width: 100%;
+        height: 443px;
+
+
+
+    }
+
+    .rest-about-food {
+
+        max-width: 100%;
+
+
+        height: 149px;
+    }
+
+
+    .rest-about-drinks {
+
+        max-width: 100%;
+        height: 149px
+    }
+
+    .rest-about-all {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .rest-about-all {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .rest-about-photos {
+
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .rest-about-small {
+        gap: 20px;
+
+    }
+
+    .rest-about-text {
+        flex-direction: column;
+        gap: 24px;
+        position: static;
+        align-items: center;
+        margin-top: 32px;
+
+
+    }
+
+
+
+    .rest-about-text1 {
+        width: 100%;
+
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        color: var(--text-color-primary);
+    }
+
+    .rest-about-text2 {
+        width: 100%;
+
+
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        color: var(--text-color-primary);
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+
+    .rest-about-photos {
+        display: flex;
+        gap: 32px;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        justify-content: center;
+    }
+
+    .rest-about-chef {
+        width: 388px;
+        height: 515px;
+
+
+
+    }
+
+    .rest-about-small {
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .rest-about-food {
+
+        width: 284px;
+        height: 296px;
+    }
+
+
+    .rest-about-drinks {
+        width: 284px;
+        height: 203px;
+    }
+
+    .rest-about-all {
+        align-items: center;
+
+        flex-direction: column;
+    }
+
+    .rest-about-text1 {
+        width: 100%;
+
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0;
+
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        color: var(--text-color-primary);
+    }
+
+    .rest-about-text2 {
+        width: 100%;
+
+
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+
+        margin: 0;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        color: var(--text-color-primary);
+    }
+
+    .rest-about-text {
+        gap: 32px;
+        position: static;
+        margin-top: 40px;
+        justify-content: center;
+
+    }
+
+    .rest-about-all {
+        gap: 0;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+
+
+
+}
