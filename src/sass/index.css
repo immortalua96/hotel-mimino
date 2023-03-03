@@ -1,0 +1,56 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --text-color-primary: #121212;
+  --text-color-secondary: #F7F7F7;
+  --bg-color-dark: #121212;
+  --bg-color-light: #F7F7F7;
+  --bg-color-white: #ffffff;
+  --border-color-dark: #121212;
+  --border-color-light: #F7F7F7;
+}
+
+.section {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 300px;
+  background-color: tomato;
+}/*# sourceMappingURL=index.css.map */
