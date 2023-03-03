@@ -1,3 +1,31 @@
+@import './base/root';
+@import './base/reset';
+@import './base/normalize';
+@import './base/base';
+
+// header 
+@import './header/header';
+
+// Main Page
+@import './main/hero';
+@import './main/about-complex';
+@import './main/restaurants';
+@import './main/welcome-complex';
+@import './main/hotels-details';
+@import './main/location-contacts';
 
 
+// Restaurant Page
+@import './components/hero-rest';
+@import './components/about';
+@import './components/rest-menu';
+// Hotel Page
+@import './components/hero-hotel';
+@import './components/luxury';
+@import './components/triple';
+@import './components/seater';
+// Room Page
+@import './components/hero-room';
+@import './components/amenites';
+// footer
 @import './footer/footer';
