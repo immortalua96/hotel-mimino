@@ -1,3 +1,10 @@
+@media screen and (min-width: 768px) {
+  .container {
+    position: relative;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 
 .amenities {
   /* height: 1671px; */
@@ -6,19 +13,46 @@
   background-color: var(--bg-color-dark);
 }
 
-.amenities__list {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .amenities {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .amenities {
+    padding-top: 94px;
+    padding-bottom: 100px;
+  }
+}
+.amenities__title {
   margin-top: 0;
+  margin-bottom: 40px;
 
   padding-left: 0;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.14;
-  /* or 114% */
 
   letter-spacing: -0.02em;
   text-transform: uppercase;
 
   color: var(--text-color-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .amenities__title {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+}
+
+.amenities__title:last-child {
+  margin-bottom: 64px;
+}
+
+.amenities__list {
+  list-style-type: disc;
 }
 .amenities__list:not(:last-child) {
   margin-bottom: 40px;
@@ -26,7 +60,11 @@
 .amenities__list:last-child {
   margin-bottom: 64px;
 }
-
+@media screen and (min-width: 768px) {
+  .amenities__list:last-child {
+    margin-bottom: 122px;
+  }
+}
 .amenities__item {
   list-style-position: outside;
   margin-left: 25px;
@@ -41,17 +79,49 @@
 
   color: var(--text-color-secondary);
 }
+@media screen and (min-width: 768px) {
+  .amenities__item {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
 .amenities__item:first-child {
   margin-top: 28px;
 }
 .amenities__thumb {
   position: relative;
-  height: 333px;
+  max-width: 420px;
+  height: 397px;
+  margin: 0 auto;
   margin-bottom: 32px;
 }
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .amenities__thumb {
+    max-width: 704px;
+    height: 525px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .amenities__thumb {
+    height: 636px;
+  }
+}
+
 .amenities__room1 {
   position: absolute;
   right: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .amenities__room1 {
+    width: 408px;
+    height: 525px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .amenities__room1 {
+    width: 496px;
+    height: 636px;
+  }
 }
 .amenities__room2 {
   position: absolute;
@@ -59,12 +129,30 @@
   top: 144px;
   z-index: 30;
 }
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .amenities__room2 {
+    top: 157px;
+    width: 365px;
+    height: 182px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .amenities__room2 {
+    width: 439px;
+    height: 219px;
+  }
+}
+
 .amenities__btn {
+  position: absolute;
   display: block;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 175px;
   height: 34px;
-  padding: 8px 18px;
   margin: 0 auto;
+  bottom: 0;
+  padding: 8px 18px;
 
   font-weight: 400;
   font-size: 14px;
@@ -80,4 +168,33 @@
 
   border: 0.8px solid var(--border-color-light);
   border-radius: 32px;
+}
+.amenities__btn:hover,
+.amenities__btn:focus {
+  background-color: #ffffff;
+  color: #121212;
+  border: 0.8px solid #f7f7f7;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .amenities__btn {
+    position: absolute;
+    padding: 8px 23px;
+    left: 32px;
+    bottom: 114px;
+    width: 143px;
+    height: 40px;
+    z-index: 30;
+    line-height: 1.71;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .amenities__btn {
+    position: absolute;
+    padding: 9px 24px;
+    width: 170px;
+    height: 42px;
+    font-size: 18px;
+    line-height: 1.33;
+    /* identical to box height, or 133% */
+  }
 }
