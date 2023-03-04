@@ -1,4 +1,4 @@
-.restaurant-section {
+.restaurant-menu-section {
    padding: 40px 0px 64px;
    background-color: var(--bg-color-dark);
 
@@ -11,7 +11,7 @@
 }
 
 }
-.restaurant-container {
+.restaurant-menu-container {
     min-width: 320px;
     max-width: 375px;
     margin: 0 auto;
@@ -31,7 +31,7 @@
 
 }
 
-.restaurant-title {
+.restaurant-menu-title {
     font-weight: 700;
     font-size: 32px;
     line-height: calc(40 / 32);
@@ -40,39 +40,35 @@
     color: var(--text-color-secondary);
     margin-bottom: 36px;
     text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-    .restaurant-title {
+    
+    @media screen and (min-width: 768px) {
         font-size: 40px;
         line-height: calc(44 / 40);
         margin-bottom: 64px;
     }
-}
-
-@media screen and (min-width: 1440px) {
-    .restaurant-title {
-        margin-bottom: 100px;
+    
+    @media screen and (min-width: 1440px) {
+         margin-bottom: 100px;
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .restaurant-item {
+.restaurant-item {
+    display: block;
+    
+    @media screen and (min-width: 1440px) {
         display: flex;
         flex-wrap: wrap;
         gap: 50px;
         column-gap: 74px;
-}
+    }
 }
 
 .restaurant-wrapper {
     width: 100%;
-}
-
-@media screen and (min-width: 1440px) {
-    .restaurant-wrapper {
-    width: 515px;
-}
+    
+    @media screen and (min-width: 1440px) {
+        width: 515px;
+    }
 }
 
 .restaurant-food-type {
@@ -84,13 +80,11 @@
     color: var(--text-color-secondary);
     font-style: italic;
     margin-bottom: 22px;
-}
-
-@media screen and (min-width: 768px) {
-.restaurant-food-type {
-    font-size: 24px;
-    line-height: calc(24 / 24);
-}
+    
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
+        line-height: calc(24 / 24);
+    }
 }
 
 .restaurant-dish {
@@ -100,13 +94,11 @@
     letter-spacing: -0.02em;
     color: var(--text-color-secondary);
     margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-    .restaurant-dish {
+    
+    @media screen and (min-width: 768px) {
         font-size: 18px;
         line-height: calc(24 / 18);
-}
+    }
 }
 
 .restaurant-dish::before {
@@ -121,14 +113,12 @@
     letter-spacing: 0.18em;
     color: rgba(216, 215, 215, 0.5);
     width: 202px;
-}
-
-@media screen and (min-width: 768px) {
-    .restaurant-ingredient { 
+    
+    @media screen and (min-width: 768px) {
         font-size: 12px;
         line-height: calc(18 / 12);
         width: 325px;
-}
+    }
 }
 
 .restaurant-details {
@@ -138,7 +128,7 @@
 .restaurant-inner {
     padding: 13px 0px;
     display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .restaurant-weight {
@@ -148,14 +138,12 @@
     color: #D8D7D7;
     text-align: right;
     margin-bottom: 14px;
-}
-
-@media screen and (min-width: 768px) {
-    .restaurant-weight {
+    
+    @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: calc(18 / 14);
         margin-bottom: 8px;
-}
+    }
 }
 
 .restaurant-price {
@@ -165,19 +153,17 @@
     letter-spacing: -0.02em;
     color: #F7F7F7;
     margin-left: auto;
-}
-
-@media screen and (min-width: 768px) {
-    .restaurant-price {
+    
+    @media screen and (min-width: 768px) {
         font-size: 18px;
         line-height: calc(24 / 18);
-}
+    }
 }
 
 .restaurant-sweets {
     display: flex;
     padding: 14px 0px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .restaurant-delicacy {
@@ -186,4 +172,230 @@
 
 .restaurant-desserts {
     margin-bottom: 22px;
+}
+
+.restaurant-table-btn {
+    display: block;
+    margin: 0px auto;
+    padding: 8px 24px;
+    border: 0.8px solid var(--text-color-secondary);
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-secondary);
+    border-radius: 32px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    transition: background-color var(--animation-for-hover), color var(--animation-for-hover);
+    
+    @media screen and (min-width: 768px) {
+        margin: 0px;
+    }
+    
+    @media screen and (min-width: 1440px) {
+        margin-top: 50px;
+        padding: 9px 24px;
+        font-size: 18px;
+        line-height: calc(24 / 18);
+    }
+}
+
+.restaurant-table-btn:focus,
+.restaurant-table-btn:hover {
+    background-color: var(--text-color-secondary);
+    color: var(--bg-color-dark);
+}
+
+/**
+  |============================
+  | modal book a table
+  |============================
+*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(246, 246, 246, .2);
+    z-index: 100;
+}
+
+.modal-book-table {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: auto;
+    width: 95%;
+    max-width: 335px;
+    height: 95%;
+    max-height: 528px;
+    background-color: var(--bg-color-dark);
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    padding: 24px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 628px;
+        max-height: 476px;
+        padding: 32px;
+    }
+}
+
+.modal-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    border: none;
+    top: 14px;
+    right: 14px;
+}
+
+.modal-close-btn-icon {
+    stroke: var(--text-color-secondary);
+}
+
+.modal-slogan {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: calc(38 / 28);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-color-secondary);
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 36px;
+        line-height: calc(40 / 36);
+        margin-bottom: 60px;
+    }
+}
+
+.modal-slogan-item {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 28px;
+    line-height: calc(38 / 28);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-color-secondary);
+
+    @media screen and (min-width: 768px) {
+        font-size: 36px;
+        line-height: calc(40 / 36);
+    }
+}
+
+.modal-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 0px;
+    margin: 0 auto 40px;
+    background-color: transparent;
+
+    @media screen and (min-width: 768px) {
+        gap: 40px 32px;
+        margin: 0 auto 80px;
+    }
+}
+
+.modal-form-input-desc {
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-color-secondary);
+}
+
+.modal-form-input {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding-left: 85px;
+    border: none;
+    color: var(--text-color-secondary);
+    line-height: calc(20 / 18);
+    letter-spacing: 0.02em;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-form-input-wrapper {
+    position: relative;
+    display: block;
+    margin-bottom: 4px;
+    
+}
+
+.modal-form-input-data {
+   font-size: 8px;
+    line-height: calc(12 / 8);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #D8D7D7;;
+}
+
+.modal-number-people {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal-form-people {
+    display: block;
+    position: relative;
+    height: 36px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+     @media screen and (min-width: 768px) {
+        width: 266px;
+    }
+}
+
+
+.modal-form-field {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: 266px;
+    }
+}
+
+
+.modal-form-date-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    stroke: var(--text-color-secondary);
+}
+.reservation-table-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 14px 48px;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-color-secondary);
+    border: 0.8px solid var(--text-color-secondary);
+    border-radius: 32px;
+    background-color: transparent;
+
+     @media screen and (min-width: 768px) {
+        padding: 14px 133px;
+        line-height: calc(24 / 14);
+    }
 }
