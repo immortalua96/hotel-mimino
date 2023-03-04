@@ -1,37 +1,37 @@
-@mixin screen($size) {
-  $desktop: '(min-width: 1400px)';
-  $tablet: '(min-width: 768px)';
-  $mobile: '(min-width: 375px)';
+// @mixin screen($size) {
+//   $desktop: '(min-width: 1400px)';
+//   $tablet: '(min-width: 768px)';
+//   $mobile: '(min-width: 375px)';
 
-  @if $size == desktop {
-    @media only screen and #{$desktop} {
-      @content;
-    }
-  } @else if $size == tablet {
-    @media only screen and #{$tablet} {
-      @content;
-    }
-  } @else if $size == mobile {
-    @media only screen and #{$mobile} {
-      @content;
-    }
-  }
-}
+//   @if $size == desktop {
+//     @media only screen and #{$desktop} {
+//       @content;
+//     }
+//   } @else if $size == tablet {
+//     @media only screen and #{$tablet} {
+//       @content;
+//     }
+//   } @else if $size == mobile {
+//     @media only screen and #{$mobile} {
+//       @content;
+//     }
+//   }
+// }
 
-.container {
-  max-width: 375px;
-  padding: 0 20px;
-  margin: 0 auto;
+// .container {
+//   max-width: 375px;
+//   padding: 0 20px;
+//   margin: 0 auto;
 
-  @include screen(tablet) {
-    max-width: 768px;
-    padding: 0 32px;
-  }
+//   @include screen(tablet) {
+//     max-width: 768px;
+//     padding: 0 32px;
+//   }
 
-  @include screen(desktop) {
-    max-width: 1400px;
-  }
-}
+//   @include screen(desktop) {
+//     max-width: 1400px;
+//   }
+// }
 
 .hero {
   color: $text-color-secondary;
@@ -48,7 +48,7 @@
     background-image: url('../images/hero-main/mobile-hero-bg@2x.jpg');
   }
 
-  @include screen(tablet) {
+  @include desktop {
     background-image: url('../images/hero-main/tablet-hero-bg@1x.jpg');
     background-position: center 128px;
     background-size: 542px 710px;
@@ -60,7 +60,7 @@
     background-image: url('../images/hero-main/tablet-hero-bg@2x.jpg');
   }
 
-  @include screen(desktop) {
+  @include desktop {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
@@ -80,11 +80,11 @@
     display: flex;
     flex-direction: column;
 
-    @include screen(tablet) {
+    @include tablet {
       height: 1024px;
     }
 
-    @include screen(desktop) {
+    @include desktop {
       align-items: flex-start;
       height: 770px;
     }
@@ -100,18 +100,18 @@
     margin-bottom: 24px;
     margin-top: auto;
 
-    @include screen(tablet) {
+    @include tablet {
       font-size: 150px;
     }
 
-    @include screen(desktop) {
+    @include desktop {
       font-size: 180px;
       margin-bottom: 196px;
     }
   }
 
   &__content {
-    @include screen(desktop) {
+    @include desktop {
       display: flex;
       flex-direction: row-reverse;
       gap: 226px;
@@ -146,12 +146,12 @@
       color: $text-color-primary;
     }
 
-    @include screen(tablet) {
+    @include tablet {
       line-height: 1.71;
       padding: 8px 24px;
     }
 
-    @include screen(desktop) {
+    @include desktop {
       padding: 9px 24px;
       font-size: 18px;
       line-height: 1.33;
@@ -168,13 +168,13 @@
     margin-right: auto;
     margin-bottom: 40px;
 
-    @include screen(tablet) {
+    @include tablet {
       flex-direction: row;
       min-width: 700px;
       gap: 30px;
     }
 
-    @include screen(desktop) {
+    @include desktop {
       margin-bottom: 48px;
     }
   }
@@ -184,11 +184,11 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
-    @include screen(tablet) {
+    @include tablet {
       flex-direction: row;
     }
 
-    @include screen(desktop) {
+    @include desktop {
       flex-direction: row;
       width: 338px;
     }
