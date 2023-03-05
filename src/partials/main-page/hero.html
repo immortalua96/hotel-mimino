@@ -1,20 +1,22 @@
-<section class="hero">
+<section class="hero-main">
   <div class="container">
-    <div class="hero__wrap">
-      <h1 class="hero__title">Mimino</h1>
+    <div class="hero-main__wrap">
+      <h1 class="hero-main__title">Mimino</h1>
 
-      <div class="hero__content">
-        <div class="hero__btn-wrap">
-          <button class="hero__btn">book a room</button>
-          <button class="hero__btn">book a table</button>
+      <div class="hero-main__content">
+        <div class="hero-main__btn-wrap">
+          <button class="hero-main__btn">book a room</button>
+          <button class="hero-main__btn js-open-modal" data-modal="1">
+            book a table
+          </button>
         </div>
 
-        <div class="hero__text-wrap">
-          <p class="hero__text">
+        <div class="hero-main__text-wrap">
+          <p class="hero-main__text">
             Whether you're in the mood for a hearty breakfast, a light lunch, or
             a romantic dinner, our menu has something for everyone.
           </p>
-          <p class="hero__text">
+          <p class="hero-main__text">
             At Hotel Mimino, we believe that great food should be available to
             everyone, no matter the time of day.
           </p>
@@ -23,3 +25,167 @@
     </div>
   </div>
 </section>
+
+<div class="modal modal-table" data-modal="1">
+  <div class="modal-table__wrap">
+    <h2 class="modal-table__title">Book a table</h2>
+    <form class="modal-table__form table-form">
+      <label class="table-form__field">
+        <span class="table-form__thumb">
+          <span class="table-form__lable">Your name</span>
+          <input
+            class="table-form__input"
+            name="name"
+            type="text"
+            required
+            autocomplete="off"
+            pattern="^[a-zA-Zа-яА-Я]+"
+            minlength="3"
+          />
+          <span class="table-form__desc">Who should book a table for?</span>
+        </span>
+      </label>
+      <label class="table-form__field">
+        <span class="table-form__thumb">
+          <span class="table-form__lable">Number of people</span>
+          <input
+            class="table-form__input"
+            name="number"
+            type="text"
+            required
+            value="1"
+            maxlength="2"
+            pattern="[0-9]"
+          />
+        </span>
+      </label>
+      <label class="table-form__field">
+        <span class="table-form__thumb">
+          <span class="table-form__lable">Today</span>
+          <input
+            class="table-form__input"
+            name="date"
+            type="date"
+            required
+            id="e"
+          />
+          <span class="table-form__desc">What date to book?</span>
+        </span>
+      </label>
+      <label class="table-form__field">
+        <span class="table-form__thumb">
+          <span class="table-form__lable">+ 38 () </span>
+          <input
+            class="table-form__input"
+            name="phone"
+            type="tel"
+            title="xxx-xxxxxxx"
+            required
+            pattern="[0-9]{3}-[0-9]{7}"
+          />
+          <span class="table-form__desc">Phone number</span>
+        </span>
+      </label>
+
+      <button class="table-form__submit-btn" type="submit">
+        Make a reservation
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Подложка под модальным окном -->
+<div class="overlay js-overlay-modal"></div>
+
+<script>
+  !(function (e) {
+    'function' != typeof e.matches &&
+      (e.matches =
+        e.msMatchesSelector ||
+        e.mozMatchesSelector ||
+        e.webkitMatchesSelector ||
+        function (e) {
+          for (
+            var t = this,
+              o = (t.document || t.ownerDocument).querySelectorAll(e),
+              n = 0;
+            o[n] && o[n] !== t;
+
+          )
+            ++n;
+          return Boolean(o[n]);
+        }),
+      'function' != typeof e.closest &&
+        (e.closest = function (e) {
+          for (var t = this; t && 1 === t.nodeType; ) {
+            if (t.matches(e)) return t;
+            t = t.parentNode;
+          }
+          return null;
+        });
+  })(window.Element.prototype);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    /* Записываем в переменные массив элементов-кнопок и подложку.
+      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+    var modalButtons = document.querySelectorAll('.js-open-modal'),
+      overlay = document.querySelector('.js-overlay-modal'),
+      closeButtons = document.querySelectorAll('.js-modal-close');
+
+    /* Перебираем массив кнопок */
+    modalButtons.forEach(function (item) {
+      /* Назначаем каждой кнопке обработчик клика */
+      item.addEventListener('click', function (e) {
+        /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+            Нужно подстраховаться. */
+        e.preventDefault();
+
+        /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+            и будем искать модальное окно с таким же атрибутом. */
+        var modalId = this.getAttribute('data-modal'),
+          modalElem = document.querySelector(
+            '.modal[data-modal="' + modalId + '"]'
+          );
+
+        /* После того как нашли нужное модальное окно, добавим классы
+            подложке и окну чтобы показать их. */
+        modalElem.classList.add('active');
+        overlay.classList.add('active');
+      }); // end click
+    }); // end foreach
+
+    closeButtons.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        var parentModal = this.closest('.modal');
+
+        parentModal.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    }); // end foreach
+
+    document.body.addEventListener(
+      'keyup',
+      function (e) {
+        var key = e.keyCode;
+
+        if (key == 27) {
+          document.querySelector('.modal.active').classList.remove('active');
+          document.querySelector('.overlay').classList.remove('active');
+        }
+      },
+      false
+    );
+
+    overlay.addEventListener('click', function () {
+      document.querySelector('.modal.active').classList.remove('active');
+      this.classList.remove('active');
+    });
+  }); // end ready
+</script>
+
+<script>
+  document.getElementById('e').value = new Date()
+    .toISOString()
+    .substring(0, 10);
+</script>
