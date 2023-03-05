@@ -5,7 +5,7 @@
 @import './base/fonts';
 @import './util/visually-hidden';
 
-// header 
+// header
 @import './header/header-main';
 
 // Main Page
@@ -15,7 +15,6 @@
 @import './main/welcome-complex';
 @import './main/hotels-details';
 @import './main/location-contacts';
-
 
 // Restaurant Page
 @import './restaurant-page/hero-rest';
@@ -31,3 +30,5 @@
 @import './room-page/amenites';
 // footer
 @import './footer/footer';
+
+@import './modals';
