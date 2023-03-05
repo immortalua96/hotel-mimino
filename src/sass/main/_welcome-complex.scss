@@ -25,11 +25,13 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  .welcome-complex__text {
+    display: flex;
+  }
   .welcome-complex__title {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
   }
 }
 .welcome-complex__title {
