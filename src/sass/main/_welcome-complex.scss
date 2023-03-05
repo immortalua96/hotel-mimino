@@ -1,4 +1,9 @@
 @media screen and (max-width: 767px) {
+  .container {
+    width: 335px;
+    height: 833px;
+    padding: 64px 0;
+  }
   .welcome-complex__img {
     max-width: 335px;
   }
@@ -8,11 +13,7 @@
   .welcome-p2 {
     width: 335px;
   }
-  .welcome-complex {
-    width: 335px;
-    height: 833px;
-    padding: 64px 0;
-  }
+
   .welcome-complex__p.welcome-p2 {
     padding: 32px 0;
   }
