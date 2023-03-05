@@ -11,14 +11,16 @@
   .welcome-complex {
     max-width: 335px;
     height: 833px;
-    padding: 0 20px;
   }
-  .welcome-complex__info {
-    width: 704px;
-    height: 284px;
-  }
+
   .welcome-complex__p {
     max-width: 335px;
+  }
+  .welcome-complex__foto {
+    padding-top: 32px;
+  }
+  .welcome-complex__text {
+    padding: 32px 0;
   }
   .welcome-p1 {
     max-width: 306px;
@@ -77,4 +79,7 @@
   text-transform: uppercase;
 
   color: #000000;
+}
+.welcome-complex {
+  padding: 0 20px;
 }
