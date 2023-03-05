@@ -5,7 +5,7 @@
     line-height: 1.12;
   }
   .welcome-complex__img {
-    max-width: 335px;
+    min-width: 335px;
     padding-bottom: 0;
   }
 
@@ -68,7 +68,7 @@
     height: 599px;
   }
   .welcome-complex__img {
-    max-width: 672px;
+    min-width: 672px;
     padding-bottom: 0;
   }
 }
