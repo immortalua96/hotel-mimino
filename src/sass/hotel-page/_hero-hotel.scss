@@ -1,8 +1,5 @@
 .restaurant-hero {
   padding-top: 40px;
-}
-
-.container-restaurant-hero {
   background-color: #f6f6f6;
 }
 
@@ -19,7 +16,7 @@
   margin-bottom: 24px;
 }
 
-.restaurant-herobuttons {
+.restaurant-hero-btn-wrap {
   display: flex;
   gap: 12px;
 }
@@ -41,6 +38,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: color var(--animation-for-hover),
+    background-color var(--animation-for-hover);
+}
+
+.restaurant-hero-btn:hover,
+.restaurant-hero-btn:focus {
+  background-color: var(--bg-color-dark);
+  color: var(--bg-color-fone);
 }
 
 .restaurant-hero-text {
@@ -103,4 +109,10 @@
     font-size: 18px;
     line-height: 1.333;
   }
+}
+
+// ===== Swiper =====
+.swiper {
+  width: 600px;
+  height: 300px;
 }
