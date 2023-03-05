@@ -1,13 +1,6 @@
-@media screen and (min-width: 768px) {
-  .container {
-    position: relative;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
 @media screen and (min-width: 1440px) {
   .container.amenities__flex {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
   }
@@ -22,7 +15,6 @@
 }
 
 .amenities {
-  /* height: 1671px; */
   padding-top: 40px;
   padding-bottom: 64px;
   background-color: var(--bg-color-dark);
@@ -205,10 +197,11 @@
 }
 .amenities__btn:hover,
 .amenities__btn:focus {
-  background-color: #ffffff;
-  color: #121212;
-  border: 0.8px solid #f7f7f7;
+  background-color: var(--bg-color-white);
+  color: var(--text-color-primary);
+  border: 0.8px solid var(--border-color-light);
 }
+
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .amenities__btn {
     position: absolute;
