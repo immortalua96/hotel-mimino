@@ -136,6 +136,8 @@ max-width: 375px;
     gap: 20px;
     position: relative;
     left: 0;
+    transition: left var(--animation-for-hover);
+    
   }
 
   // .slider_foto
@@ -143,6 +145,9 @@ max-width: 375px;
   &_foto {
     width: 250px;
     height: auto;
+    @media screen and (min-width:768px) {
+      width: 436px;
+    }
   }
 }
 
