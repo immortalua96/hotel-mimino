@@ -1,0 +1,52 @@
+@mixin screen($size) {
+  $desktop: '(min-width: 1400px)';
+  $tablet: '(min-width: 768px)';
+  $mobile: '(min-width: 375px)';
+
+  @if $size == desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  }
+
+  @else if $size == tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  }
+
+  @else if $size == mobile {
+    @media only screen and #{$mobile} {
+      @content;
+    }
+  }
+}
+// -------------- Миксин для адаптивки -------------
+@mixin desktop {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+@mixin mobile-only {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

@@ -3,9 +3,10 @@
 @import './base/root';
 @import './base/base';
 @import './base/fonts';
+@import './util/visually-hidden';
 
 // header 
-@import './header/header';
+@import './header/header-main';
 
 // Main Page
 @import './main/hero';
