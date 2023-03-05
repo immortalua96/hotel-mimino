@@ -44,6 +44,21 @@
     letter-spacing: -0.02em;
   }
 }
+@media screen and (min-width: 1440px) {
+  .welcome-complex__title {
+    width: 434px;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: -0.02em;
+  }
+  .welcome-complex__text {
+    width: 437px;
+  }
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
 .welcome-complex__title {
   font-weight: 500;
   letter-spacing: -0.02em;
