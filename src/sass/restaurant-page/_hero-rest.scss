@@ -112,7 +112,38 @@
 }
 
 // ===== Swiper =====
-.swiper {
-  width: 600px;
-  height: 300px;
+.container {
+
+  // .container_slider
+
+  &_slider {}
 }
+
+.slider {
+  outline: 2 solid red;
+  overflow: hidden;
+max-width: 375px;
+@media screen and (min-width:768px) {
+  max-width: 768px;
+}
+@media screen and (min-width:1440px) {
+  max-width: 1440px;
+}
+  // .slider_line
+
+  &_line {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    left: 0;
+  }
+
+  // .slider_foto
+
+  &_foto {
+    width: 250px;
+    height: auto;
+  }
+}
+
+.btn-next {}

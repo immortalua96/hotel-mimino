@@ -1,6 +1,4 @@
-
-
-.hero {
+.hero-main {
   color: $text-color-secondary;
   // padding-bottom: 40px;
   background-color: $bg-color-dark;
@@ -161,3 +159,249 @@
     }
   }
 }
+
+/* Стили для подложки */
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+
+  /*  Установаем ширину окна  */
+  // width: 100%;
+  // max-width: 335px;
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  // text-align: center;
+  // padding: 30px;
+  // border-radius: 3px;
+  // background-color: #fff;
+  transition: 0.3s all;
+}
+
+/* Стили для активных классов подложки и окна */
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+.modal-table {
+  background: #121212;
+  border-radius: 2px;
+  padding: 24px;
+  padding-bottom: 40px;
+
+  &__wrap {
+    color: $text-color-secondary;
+    width: 100%;
+    max-width: 335px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.36;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+}
+
+.table-form {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  &__field {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  &__lable {
+    display: block;
+  }
+
+  &__input {
+    color: inherit;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+    background-color: $bg-color-dark;
+    border: none;
+    border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
+
+    // transition: border-color var(--transition-dur-func);
+
+    // &:focus {
+    //   border-color: var(--border-modal-active-color);
+    //   outline: none;
+    // }
+  }
+
+  &__desc {
+    color: #d8d7d7;
+    display: block;
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  &__submit-btn {
+    width: 235px;
+    padding: 14px 48px;
+    color: inherit;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    background-color: $border-color-dark;
+    border: 0.8px solid $border-color-light;
+    border-radius: 32px;
+    margin-top: 40px;
+  }
+}
+
+// .order-form__input
+
+// .order-form__icon {
+//   position: absolute;
+//   top: 50%;
+//   left: 16px;
+
+//   fill: var(--text-dark-color);
+
+//   transition: fill var(--transition-dur-func);
+//   transform: translateY(-50%);
+// }
+
+// .order-form__input:focus + .modal-form-icon {
+//   fill: var(--text-brand-color);
+// }
+
+// .order-form__comment {
+//   width: 100%;
+//   height: 120px;
+//   padding: 8px 16px;
+//   border: 1px solid var(--border-modal-primary-color);
+//   border-radius: 4px;
+//   color: var(--text-dark-color);
+
+//   resize: none;
+
+//   transition: border-color var(--transition-dur-func);
+// }
+
+// .order-form__comment::placeholder {
+//   color: var(--text-placeholder-color);
+// }
+
+// .order-form__comment:focus {
+//   border-color: var(--border-modal-active-color);
+//   outline: none;
+// }
+
+// .modal-form__check-desc {
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 24px;
+// }
+
+// .order-form__check-desc::before {
+//   content: '';
+//   display: block;
+//   width: 16px;
+//   height: 16px;
+//   margin-right: 8px;
+//   border: 1.25px solid var(--text-dark-color);
+//   border-radius: 2px;
+//   cursor: pointer;
+
+//   transition: background-image var(--transition-dur-func),
+//     background-color var(--transition-dur-func),
+//     border-color var(--transition-dur-func);
+// }
+
+// .order-form__check:checked + .order-form-check-desc::before {
+//   border-color: var(--border-pressed-color);
+//   background-color: var(--bg-pressed-color);
+//   background-image: url('../images/checked.svg');
+//   background-position: 50% 50%;
+//   background-size: 10px 8px;
+//   background-repeat: no-repeat;
+// }
+
+// /* Fake focus */
+// .order-form-check:focus-within + .order-form-check-desc::before {
+//   /* outline: 2px solid blue; */
+// }
+
+// .order-form__link {
+//   color: var(--text-brand-color);
+// }
+
+// .order-form__submit {
+//   @extend %btn;
+//   align-self: center;
+//   width: 169px;
+//   padding: 16px 32px;
+//   border-radius: 4px;
+//   background-color: var(--bg-brand-color);
+//   color: var(--text-white-color);
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 1.5;
+//   letter-spacing: 0.04em;
+
+//   transition: background-color var(--transition-dur-func);
+// }
+
+// .order-form__submit:hover,
+// .order-form__submit:focus {
+//   background-color: var(--bg-pressed-color);
+// }
+
+// @media screen and (min-width: 768px) {
+//   .modal {
+//     width: 408px;
+//     padding-right: 24px;
+//     padding-left: 24px;
+//   }
+// }
