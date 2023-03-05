@@ -28,7 +28,17 @@
   .welcome-complex__text {
     display: flex;
   }
+  .welcome-p1 {
+    width: 306px;
+
+    padding-right: 32px;
+  }
+  .welcome-p2 {
+    width: 366px;
+  }
+
   .welcome-complex__title {
+    width: 434px;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: -0.02em;
