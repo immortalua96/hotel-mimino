@@ -34,12 +34,12 @@ img {
 
 :root {
   --text-color-primary: #121212;
-  --text-color-secondary: #F7F7F7;
+  --text-color-secondary: #f7f7f7;
   --bg-color-dark: #121212;
-  --bg-color-light: #F7F7F7;
+  --bg-color-light: #f7f7f7;
   --bg-color-white: #ffffff;
   --border-color-dark: #121212;
-  --border-color-light: #F7F7F7;
+  --border-color-light: #f7f7f7;
 }
 
 .section {
@@ -167,7 +167,7 @@ img {
     flex-wrap: wrap;
     gap: 50px;
     -moz-column-gap: 74px;
-         column-gap: 74px;
+    column-gap: 74px;
   }
 }
 .restaurant-wrapper {
@@ -212,7 +212,7 @@ img {
   }
 }
 .restaurant-dish::before {
-  content: "•";
+  content: '•';
   color: var(--text-color-secondary);
   padding-inline: 10px;
 }
@@ -246,7 +246,7 @@ img {
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: -0.02em;
-  color: #D8D7D7;
+  color: #d8d7d7;
   text-align: right;
   margin-bottom: 14px;
 }
@@ -263,7 +263,7 @@ img {
   font-size: 14px;
   line-height: 1.2857142857;
   letter-spacing: -0.02em;
-  color: #F7F7F7;
+  color: #f7f7f7;
   margin-left: auto;
 }
 
@@ -285,4 +285,4 @@ img {
 
 .restaurant-desserts {
   margin-bottom: 22px;
-}/*# sourceMappingURL=index.css.map */
+}
