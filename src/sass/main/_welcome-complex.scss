@@ -1,6 +1,6 @@
 @media screen and (max-width: 767px) {
   .welcome-complex__img {
-    min-width: 335px;
+    max-width: 335px;
   }
   .welcome-p1 {
     width: 306px;
@@ -20,12 +20,32 @@
     padding-top: 32px;
   }
   .welcome-complex__title {
-    font-weight: 500;
     font-size: 32px;
     line-height: 1.12;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .welcome-complex__title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+}
 .welcome-complex__title {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+.welcome-complex__ind {
+  font-style: italic;
+}
+.welcome-complex__p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
   letter-spacing: -0.02em;
   text-transform: uppercase;
 
