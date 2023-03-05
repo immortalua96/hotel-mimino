@@ -19,4 +19,15 @@
   .welcome-complex__p.welcome-p1 {
     padding-top: 32px;
   }
+  .welcome-complex__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.12;
+  }
+}
+.welcome-complex__title {
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  color: #000000;
 }
