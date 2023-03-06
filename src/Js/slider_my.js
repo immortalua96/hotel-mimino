@@ -1,7 +1,7 @@
 let offset = 0;// зміщення
 
 
-const sliderLine = document.querySelector('.slider_line');
+const textSLider = document.querySelector('.text_slider');
 
 
 document.querySelector('.btn-next').addEventListener('click', function () {
