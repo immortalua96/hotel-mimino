@@ -1,9 +1,4 @@
 @media screen and (max-width: 767px) {
-  .container {
-    max-width: 335px;
-
-    margin: 64px 0;
-  }
   .welcome-complex__img {
     min-width: 335px;
   }
@@ -58,12 +53,7 @@
   .welcome-complex__text {
     width: 437px;
   }
-  .container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    padding: 100px 0;
-  }
+  
   .welcome-complex__info {
     padding-left: 32px;
   }
