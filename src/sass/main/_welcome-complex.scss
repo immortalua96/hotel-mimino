@@ -43,6 +43,12 @@
   }
 }
 @media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 100px 0;
+  }
   .welcome-complex__title {
     width: 434px;
     font-size: 36px;
@@ -53,7 +59,7 @@
   .welcome-complex__text {
     width: 437px;
   }
-  
+
   .welcome-complex__info {
     padding-left: 32px;
   }
