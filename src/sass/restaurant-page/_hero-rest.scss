@@ -112,43 +112,68 @@
 }
 
 // ===== Swiper =====
-.container {
+/* Основные стили */
 
-  // .container_slider
-
-  &_slider {}
+/* Слайдер */
+.slick-slider {
+  min-width: 0;
 }
 
-.slider {
-  outline: 2 solid red;
+/* Ограничивающая оболочка */
+.slick-list {
   overflow: hidden;
-max-width: 375px;
-@media screen and (min-width:768px) {
-  max-width: 768px;
-}
-@media screen and (min-width:1440px) {
-  max-width: 1440px;
-}
-  // .slider_line
-
-  &_line {
-    display: flex;
-    gap: 20px;
-    position: relative;
-    left: 0;
-    transition: left var(--animation-for-hover);
-    
-  }
-
-  // .slider_foto
-
-  &_foto {
-    width: 250px;
-    height: auto;
-    @media screen and (min-width:768px) {
-      width: 436px;
-    }
-  }
 }
 
-.btn-next {}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide {}
+
+/* Слайд активный */
+.slick-slide.slick-active {}
+
+/* Слайд основной */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Стрелка */
+.slick-arrow {}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {}
+
+/* Точки */
+.slick-dots {}
+
+.slick-dots li {}
+
+.slick-dots button {}
+
+/* Конкретный слайдер */
+.slider {
+  position: relative;
+  
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 0 ;
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  background-color: #121212;
+  width: 30px;
+  height: 60px;
+}
