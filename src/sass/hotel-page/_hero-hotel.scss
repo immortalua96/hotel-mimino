@@ -1,115 +1,262 @@
-.restaurant-hero {
+.hotel__section {
   padding-top: 40px;
+  padding-left: 20px;
+  padding-bottom: 64px;
   background-color: #f6f6f6;
+  overflow: hidden;
 }
 
-.restaurant-hero-title {
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 1;
+.hotel-hero__title {
+    font-family: var(--font-primary);
 
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: calc(40 / 40);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
 
-  color: var(--text-color-primary);
+    color: var(--text-color-primary);
 
-  margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 
-.restaurant-hero-btn-wrap {
+.hotel-hero__element-btn {
+    width: 131px;
+    height: 34px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    border: 0.8px solid #121212;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color var(--animation-for-hover),
+    background-color var(--animation-for-hover);
+
+    margin-bottom: 40px;
+}
+.hotel-hero__btn--right {
+  width: 117px;
+  height: 34px;
+}
+
+
+
+.hotel-hero__element-btn:hover,
+ .hotel-hero__element-btn:focus {
+ background-color: var(--bg-color-dark);
+ color: var(--bg-color-fone);
+}
+
+.hotel-hero__list-btn {
   display: flex;
   gap: 12px;
 }
 
-.restaurant-hero-btn {
-  width: 128px;
-  height: 34px;
-
-  border: 0.8px solid #121212;
-  border-radius: 32px;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.29;
-
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-
+.hotel-hero__list-picture {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: color var(--animation-for-hover),
-    background-color var(--animation-for-hover);
+  gap: 20px;
+  
 }
 
-.restaurant-hero-btn:hover,
-.restaurant-hero-btn:focus {
-  background-color: var(--bg-color-dark);
-  color: var(--bg-color-fone);
+.hotel-hero__txt {
+  font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #121212;
+    margin-top: 40px;
 }
 
-.restaurant-hero-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.29;
-
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+.hotel__img {
+  max-width: 250px;
 }
 
-@media screen and (min-width: 375px) {
-  .container-restaurant-hero {
-    width: 375px;
-    padding-left: 20px;
-  }
-}
 
 @media screen and (min-width: 768px) {
-  .container-restaurant-hero {
-    width: 768px;
+  .hotel__section {
+  padding-top: 40px;
     padding-left: 34px;
+    padding-bottom: 40px;
   }
 
-  .restaurant-hero-title {
-    margin-bottom: 32px;
+.hotel-hero__title {
+    
     font-size: 80px;
-  }
+    line-height: calc(80 / 80);
+   
+}
 
-  .restaurant-hero-btn {
-    width: 140px;
-    height: 40px;
-    line-height: 1.714;
-  }
+.hotel-hero__element-btn {
+width: 143px;
+height: 40px;
+line-height: calc(24 / 14);
+}
 
-  .restaurant-herobuttons {
-    gap: 10px;
-  }
+.hotel-hero__btn--right {
+  width: 129px;
+  height: 40px;
+}
 
-  .restaurant-hero-text {
-    width: 338px;
-  }
+.hotel-hero__list-btn {
+  gap: 14px;
+
+}
+
+.hotel__img {
+  width: 436px;
+  max-width: 436px;
+}
 }
 
 @media screen and (min-width: 1440px) {
-  .container-restaurant-hero {
-    width: 1440px;
-    padding-left: 32px;
-  }
-  .restaurant-hero-title {
-    font-size: 90px;
-  }
-  .restaurant-herobuttons {
-    gap: 14px;
-  }
-  .restaurant-hero-btn {
-    width: 167px;
-    height: 42px;
+  .hotel__section {
+      padding-top: 30px;
+      padding-left: 32px;
+      padding-bottom: 48px;
+    }
 
-    font-size: 18px;
-    line-height: 1.333;
-  }
+    .hotel-hero__elem {
+      display: flex;
+      
+
+    }
+    
+    .hotel-hero__item {
+      display: flex;
+
+    }
+
+        .hotel__img {
+          width: 436px;
+          max-width: 436px;
+        }
 }
+
+
+
+
+
+
+
+// .restaurant-hero {
+//   padding-top: 40px;
+//   background-color: #f6f6f6;
+// }
+
+// .restaurant-hero-title {
+//   font-weight: 400;
+//   font-size: 40px;
+//   line-height: 1;
+
+//   letter-spacing: -0.02em;
+//   text-transform: uppercase;
+
+//   color: var(--text-color-primary);
+
+//   margin-bottom: 24px;
+// }
+
+// .restaurant-hero-btn-wrap {
+//   display: flex;
+//   gap: 12px;
+// }
+
+// .restaurant-hero-btn {
+//   width: 128px;
+//   height: 34px;
+
+//   border: 0.8px solid #121212;
+//   border-radius: 32px;
+
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 1.29;
+
+//   letter-spacing: -0.02em;
+//   text-transform: uppercase;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   transition: color var(--animation-for-hover),
+//     background-color var(--animation-for-hover);
+// }
+
+// .restaurant-hero-btn:hover,
+// .restaurant-hero-btn:focus {
+//   background-color: var(--bg-color-dark);
+//   color: var(--bg-color-fone);
+// }
+
+// .restaurant-hero-text {
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 1.29;
+
+//   letter-spacing: 0.05em;
+//   text-transform: uppercase;
+// }
+
+// @media screen and (min-width: 375px) {
+//   .container-restaurant-hero {
+//     width: 375px;
+//     padding-left: 20px;
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .container-restaurant-hero {
+//     width: 768px;
+//     padding-left: 34px;
+//   }
+
+//   .restaurant-hero-title {
+//     margin-bottom: 32px;
+//     font-size: 80px;
+//   }
+
+//   .restaurant-hero-btn {
+//     width: 140px;
+//     height: 40px;
+//     line-height: 1.714;
+//   }
+
+//   .restaurant-herobuttons {
+//     gap: 10px;
+//   }
+
+//   .restaurant-hero-text {
+//     width: 338px;
+//   }
+// }
+
+// @media screen and (min-width: 1440px) {
+//   .container-restaurant-hero {
+//     width: 1440px;
+//     padding-left: 32px;
+//   }
+//   .restaurant-hero-title {
+//     font-size: 90px;
+//   }
+//   .restaurant-herobuttons {
+//     gap: 14px;
+//   }
+//   .restaurant-hero-btn {
+//     width: 167px;
+//     height: 42px;
+
+//     font-size: 18px;
+//     line-height: 1.333;
+//   }
+// }
 
 // ===== Swiper =====
 .swiper {
