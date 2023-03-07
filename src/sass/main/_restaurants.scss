@@ -7,14 +7,14 @@
 /* Mobile */
 
 @media screen and (max-width: 768px) {
-  .restaurant-details > .container {
+  .rest-details > .container {
     max-width: 365px;
     margin-top: 64px;
     padding-right: 15px;
     padding-left: 2px;
   }
 
-  .restaurant-details-title {
+  .rest-details-title {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
@@ -25,7 +25,7 @@
     color: var(--text-color-primary);
   }
 
-  .restaurant-details-text {
+  .rest-details-text {
     max-width: 221px;
     margin-top: 24px;
     font-family: var(--font-primary);
@@ -38,22 +38,22 @@
     color: var(--text-color-primary);
   }
 
-  .restaurant-details-btn-wrap {
+  .rest-details-btn-wrap {
     display: none;
   }
 
-  .restaurant-details-pic {
+  .rest-details-pic {
     display: inline;
   }
 
-  .restaurant-details-btn-low-wrap {
+  .rest-details-btn-low-wrap {
     margin-bottom: 64px;
     display: flex;
     justify-content: center;
     gap: 12px;
   }
 
-  .restaurant-details-btn {
+  .rest-details-btn {
     text-decoration: none;
     width: 140px;
     height: 34px;
@@ -67,7 +67,7 @@
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .restaurant-details-btn-text {
+  .rest-details-btn-text {
     text-decoration: none;
     font-family: var(--font-primary);
     font-style: normal;
@@ -80,33 +80,35 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .restaurant-details-btn:is(:hover, :focus) {
+  .rest-details-btn:is(:hover, :focus) {
     background-color: var(--bg-color-dark);
     border: none;
   }
 
-  .restaurant-details-btn:is(:hover, :focus) .restaurant-details-btn-text {
+  .rest-details-btn:is(:hover, :focus) .rest-details-btn-text {
     color: var(--bg-color-light);
   }
 
   .slider {
+    display: flex;
+    padding-left: 20px;
     margin-top: 32px;
     margin-bottom: 82px;
   }
 
-  .slider-img {
+  .slider-item {
     width: 158px;
   }
 
-  .slider-img-desk {
-    display: none;
-  }
+  // .slider-item-desk {
+  //   display: none;
+  // }
 
-  .slider-img:not(:last-child) {
+  .slider-item:not(:last-child) {
     margin-right: 20px;
   }
 
-  .prev {
+  .btn-prev {
     position: absolute;
     top: 225px;
     left: 0px;
@@ -119,7 +121,7 @@
     transform: rotate(-180deg);
   }
 
-  .next {
+  .btn-next {
     position: absolute;
     top: 225px;
     right: 310px;
@@ -135,21 +137,21 @@
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-  .restaurant-details > .container {
+  .rest-details > .container {
     width: 734px;
     margin-top: 80px;
     padding-right: 15px;
     padding-left: 15px;
   }
 
-  .restaurant-details-text-wrap {
+  .rest-details-text-wrap {
     margin-bottom: 80px;
     display: flex;
     align-items: center;
     gap: 32px;
   }
 
-  .restaurant-details-title {
+  .rest-details-title {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
@@ -160,7 +162,7 @@
     color: var(--text-color-primary);
   }
 
-  .restaurant-details-text {
+  .rest-details-text {
     max-width: 221px;
     font-family: var(--font-primary);
     font-style: normal;
@@ -172,22 +174,22 @@
     color: var(--text-color-primary);
   }
 
-  .restaurant-details-btn-wrap {
+  .rest-details-btn-wrap {
     display: none;
   }
 
-  .restaurant-details-desk-pic {
-    display: none;
-  }
+  // .rest-details-desk-pic {
+  //   display: none;
+  // }
 
-  .restaurant-details-btn-low-wrap {
+  .rest-details-btn-low-wrap {
     margin-bottom: 64px;
     display: flex;
     justify-content: center;
     gap: 14px;
   }
 
-  .restaurant-details-btn {
+  .rest-details-btn {
     width: 150px;
     height: 40px;
     background-color: transparent;
@@ -200,7 +202,7 @@
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .restaurant-details-btn-text {
+  .rest-details-btn-text {
     text-decoration: none;
     font-family: var(--font-primary);
     font-style: normal;
@@ -213,61 +215,62 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .restaurant-details-btn:is(:hover, :focus) {
+  .rest-details-btn:is(:hover, :focus) {
     background-color: var(--bg-color-dark);
     border: none;
   }
 
-  .restaurant-details-btn:is(:hover, :focus) .restaurant-details-btn-text {
+  .rest-details-btn:is(:hover, :focus) .rest-details-btn-text {
     color: var(--bg-color-light);
   }
 
   .slider {
     margin-bottom: 108px;
+    display: flex;
   }
+}
 
-  .slider-img {
-    width: 336px;
-  }
+.slider-item {
+  width: 336px;
+}
 
-  .slider-img-desk {
-    display: none;
-  }
+// .slider-item-desk {
+//   display: none;
+// }
 
-  .slider-img:not(:last-child) {
-    margin-right: 32px;
-  }
+.slider-item:not(:last-child) {
+  margin-right: 32px;
+}
 
-  .prev {
-    position: absolute;
-    top: 350px;
-    left: 0px;
-    height: 14px;
-    width: 7px;
-    z-index: 1;
-    cursor: pointer;
-    stroke: var(--bg-color-dark);
-    fill: transparent;
-    transform: rotate(-180deg);
-  }
+.btn-prev {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  height: 14px;
+  width: 7px;
+  z-index: 1;
+  cursor: pointer;
+  stroke: var(--bg-color-dark);
+  fill: transparent;
+  transform: rotate(-180deg);
+}
 
-  .next {
-    position: absolute;
-    top: 350px;
-    right: 640px;
-    height: 14px;
-    width: 7px;
-    z-index: 1;
-    cursor: pointer;
-    stroke: var(--bg-color-dark);
-    fill: transparent;
-  }
+.btn-next {
+  position: absolute;
+  top: 350px;
+  right: 640px;
+  height: 14px;
+  width: 7px;
+  z-index: 1;
+  cursor: pointer;
+  stroke: var(--bg-color-dark);
+  fill: transparent;
 }
 
 /* Desktop */
 
 @media screen and (min-width: 1440px) {
-  .restaurant-details > .container {
+  .rest-details > .container {
     width: 1440px;
     margin-top: 0;
     padding-top: 44px;
@@ -276,85 +279,88 @@
     padding-bottom: 26px;
   }
 
-  .restaurant-details-wrap {
+  .rest-details-wrap {
     display: flex;
     justify-content: space-between;
   }
 
-  .restaurant-details-btn-wrap {
+  .rest-details-btn-wrap {
     display: flex;
     gap: 14px;
-    padding-top: 60px;
   }
 
-  .restaurant-details-btn {
+  .rest-details-btn {
     cursor: pointer;
     text-decoration: none;
     width: 167px;
     height: 42px;
   }
 
-  .restaurant-details-btn-text {
+  .rest-details-btn-text {
     text-decoration: none;
     font-size: 18px;
     line-height: 1.33;
   }
 
-  .restaurant-details-list {
+  .rest-details-list {
     position: relative;
   }
 
-  .restaurant-details-list-wrap {
+  .rest-details-list-wrap {
     display: flex;
     gap: 32px;
   }
 
-  .restaurant-details-list-item {
+  .rest-details-list-item {
     width: calc((100% - 32px) / 2);
   }
 
-  .restaurant-details-list-item-desk:not(:last-child) {
+  .rest-details-list-item-desk:not(:last-child) {
     margin-right: 32px;
   }
 
-  .restaurant-details-list-item:nth-child(-n + 1) {
+  .rest-details-list-item:nth-child(-n + 1) {
     margin-right: 32px;
   }
 
-  /* .restaurant-details-desk-pic, .restaurant-details-pic {
+  /* .rest-details-desk-pic, .rest-details-pic {
         width: 266px;
     } */
 
-  .restaurant-details-desk-pic {
-    display: block;
-    width: 266px;
-  }
+  // .rest-details-desk-pic {
+  //   display: block;
+  //   width: 266px;
+  // }
 
-  .restaurant-details-icons {
-    margin-top: 51px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  // .rest-details-icons {
+  //   margin-top: 51px;
+  //   margin-right: auto;
+  //   margin-left: auto;
+  // }
 
-  .restaurant-details-btn-low-wrap {
+  .rest-details-btn-low-wrap {
     display: none;
   }
 
-  .slider-img {
+  .slider {
+    display: flex;
+  }
+
+  .slider-item {
     width: 266px;
   }
 
-  .slider-img-desk {
-    display: block;
-    width: 266px;
+  // .slider-item-desk {
+  //   display: block;
+  //   width: 266px;
+  //   margin-right: 32px;
+  // }
+
+  .slider-item:not(:last-child) {
     margin-right: 32px;
   }
 
-  .slider-img:not(:last-child) {
-    margin-right: 32px;
-  }
-
-  .prev {
+  .btn-prev {
     position: absolute;
     top: 350px;
     left: 660px;
@@ -367,7 +373,7 @@
     transform: rotate(-180deg);
   }
 
-  .next {
+  .btn-next {
     position: absolute;
     top: 350px;
     right: 660px;
