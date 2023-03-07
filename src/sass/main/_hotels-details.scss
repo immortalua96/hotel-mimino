@@ -1,3 +1,18 @@
+.hotel-details.section {
+    padding: 32px 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .hotel-details.section {
+        padding: 44px 0px;
+    }
+}
+
+.hotel-details__container {
+    overflow: hidden;
+
+
+}
 
 .hotel-details {
     display: flex;
@@ -179,7 +194,7 @@
 
 .hotel-details__mob-img-wrap {
     display: flex;
-    gap: 19px;
+    gap: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -224,4 +239,12 @@
 
 .hotel-details__swiper-icon {
     stroke: var(--bg-color-white);
+}
+
+.hotel-details__img {
+    max-width: none;
+}
+
+.hotel-details__swiper-btn {
+    border: 0;
 }
