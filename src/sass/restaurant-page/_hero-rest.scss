@@ -1,6 +1,6 @@
-.restaurant-hero {
-  padding-top: 40px;
+.rest__hero {
   background-color: #f6f6f6;
+  overflow: hidden;
 }
 
 .restaurant-hero-title {
@@ -19,6 +19,7 @@
 .restaurant-hero-btn-wrap {
   display: flex;
   gap: 12px;
+  margin-bottom: 40px;
 }
 
 .restaurant-hero-btn {
@@ -39,6 +40,8 @@
   align-items: center;
   justify-content: center;
 
+  background-color: transparent;
+
   transition: color var(--animation-for-hover),
     background-color var(--animation-for-hover);
 }
@@ -49,6 +52,15 @@
   color: var(--bg-color-fone);
 }
 
+.hero__list {
+  display: flex;
+  gap: 20px;
+}
+
+.hero__img {
+  max-width: 250px;
+}
+
 .restaurant-hero-text {
   font-weight: 400;
   font-size: 14px;
@@ -56,6 +68,12 @@
 
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  margin-top: 40px;
+}
+
+.restaurant-hero-text span {
+  font-style: italic;
 }
 
 @media screen and (min-width: 375px) {
@@ -92,12 +110,16 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .container-restaurant-hero {
-    width: 1440px;
-    padding-left: 32px;
+  .rest-banner {
+    display: flex;
+    align-items: center;
+  }
+  .rest-wrap {
+    margin-right: 181px;
   }
   .restaurant-hero-title {
     font-size: 90px;
+    margin-bottom: 32px;
   }
   .restaurant-herobuttons {
     gap: 14px;
@@ -108,6 +130,9 @@
 
     font-size: 18px;
     line-height: 1.333;
+  }
+  .restaurant-hero-text {
+    margin-top: -38px;
   }
 }
 
@@ -131,45 +156,55 @@
 }
 
 /* Слайд */
-.slick-slide {}
+.slick-slide {
+}
 
 /* Слайд активный */
-.slick-slide.slick-active {}
+.slick-slide.slick-active {
+}
 
 /* Слайд основной */
-.slick-slide.slick-current {}
+.slick-slide.slick-current {
+}
 
 /* Слайд по центру */
-.slick-slide.slick-center {}
+.slick-slide.slick-center {
+}
 
 /* Стрелка */
-.slick-arrow {}
+.slick-arrow {
+}
 
 /* Стрелка влево */
-.slick-arrow.slick-prev {}
+.slick-arrow.slick-prev {
+}
 
 /* Стрелка вправо */
-.slick-arrow.slick-next {}
+.slick-arrow.slick-next {
+}
 
 /* Стрелка не активная */
-.slick-arrow.slick-disabled {}
+.slick-arrow.slick-disabled {
+}
 
 /* Точки */
-.slick-dots {}
+.slick-dots {
+}
 
-.slick-dots li {}
+.slick-dots li {
+}
 
-.slick-dots button {}
+.slick-dots button {
+}
 
 /* Конкретный слайдер */
 .slider {
   position: relative;
-  
 }
 
 .slider .slick-arrow {
   position: absolute;
-  top: 0 ;
+  top: 0;
   margin: -30px 0px 0px 0px;
   z-index: 10;
   font-size: 0;

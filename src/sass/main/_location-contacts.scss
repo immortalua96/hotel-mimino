@@ -1,11 +1,18 @@
-.contacts__container{
+.location__section{
     padding-top: 64px;
     padding-bottom: 64px;
+    position: relative;
 }
 @media screen and (min-width: 768px){
-    .contacts__container{
+    .location__section{
         padding-top: 80px;
         padding-bottom: 80px;
+    }
+}
+@media screen and (min-width: 1440px){
+    .location__section{
+        padding-top: 100px;
+    padding-bottom: 100px;
     }
 }
 .location{
@@ -15,22 +22,32 @@ line-height: 1;
 letter-spacing: -0.02em;
 text-transform: uppercase;
 color: #121212;
-}  
+} 
+@media screen and (min-width: 1440px) {
+    .location{
+        position: absolute;
+    left: 736px;
+    top: 100px;
+    }
+}
+
 .location__maps{
     display: flex;
-    flex-direction: column-reverse;
-    gap: 30px;
+    flex-direction: column;
+    margin-top: 32px;
+    
 }
 
 @media screen and (min-width: 768px){
     .location__maps{
-        gap: 40px;
+        margin-top: 40px;
     }
 }
 @media screen and (min-width: 1440px){
     .location__maps{
         flex-direction: row;
         gap: 32px;
+        margin-top: 0px;
     }
 }
 .maps{
@@ -60,6 +77,8 @@ color: #121212;
     .location__first{
         justify-content: center;
         gap: 70px;
+        margin-top: 0px;
+        align-items: flex-end;
     }
 }
 .location__nav {
@@ -91,8 +110,13 @@ font-size: 14px;
 line-height: 1.29;
 letter-spacing: -0.02em;
 text-transform: uppercase;
-
+margin-bottom: 12px;
 color: #121212;
+}
+@media screen and (min-width: 1440px){
+    .call__us{
+        margin-bottom: 0px;
+    }
 }
 .contacts__list {
     display: flex;
