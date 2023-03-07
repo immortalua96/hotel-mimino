@@ -3,16 +3,18 @@
     <nav class="header_nav">
       <ul class="header_list">
         <li class="header_item">
-          <a class="header_link" href="/src/index.html">home</a>
+          <a class="header_link current" href="/src/index.html">home</a>
         </li>
         <li class="header_item">
-          <a class="header_link" href="/src/hotel.html">hotel</a>
+          <a class="header_link current" href="/src/hotel.html">hotel</a>
         </li>
         <li class="header_item">
-          <a class="header_link" href="/src/restaurant.html">restaurant</a>
+          <a class="header_link current" href="/src/restaurant.html"
+            >restaurant</a
+          >
         </li>
         <li class="header_item">
-          <a class="header_link" href="/src/room.html">room</a>
+          <a class="header_link current" href="/src/room.html">room</a>
         </li>
       </ul>
     </nav>
@@ -85,7 +87,7 @@
       <a class="logo_link mob-logo_link" href="/src/index.html">Mimino</a>
       <p class="logo_text mob-logo_text">restaurant-hotel complex</p>
     </div>
-    <ul class="header_media">
+    <ul class="header_media mob-header_media">
       <li>
         <a
           href="https://www.instagram.com"
@@ -125,11 +127,54 @@
     </ul>
   </div>
 
-  <ul class="mobile-menu">
-    <li><a href="" class="mob-link link">Home</a></li>
-    <li><a href="" class="mob-link link">Hotel</a></li>
-    <li><a href="" class="mob-link link">Restaurant</a></li>
-  </ul>
+  <div class="mobile-menu-wrapper">
+    <ul class="mobile-menu">
+      <li><a href="/src/index.html" class="mob-link link">Home</a></li>
+      <li><a href="/src/hotel.html" class="mob-link link">Hotel</a></li>
+      <li>
+        <a href="/src/restaurant.html" class="mob-link link">Restaurant</a>
+      </li>
+    </ul>
+
+    <ul class="mob-header_media-bottom">
+      <li>
+        <a
+          href="https://www.instagram.com"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="header-icon mob-header-icon">
+            <use href="/src/images/icon/symbol-defs.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="header-icon mob-header-icon">
+            <use href="/src/images/icon/symbol-defs.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com"
+          aria-label="Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="header-icon mob-header-icon">
+            <use href="/src/images/icon/symbol-defs.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <script
