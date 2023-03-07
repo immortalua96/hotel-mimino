@@ -1582,6 +1582,7 @@ body {
   text-transform: uppercase;
   color: #121212;
   margin-top: 40px;
+  width: 335px;
 }
 
 .hotel__img {
@@ -1614,6 +1615,9 @@ body {
     width: 436px;
     max-width: 436px;
   }
+  .hotel-hero__txt {
+    width: 338px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .hotel__section {
@@ -1621,15 +1625,24 @@ body {
     padding-left: 32px;
     padding-bottom: 48px;
   }
-  .hotel-hero__elem {
-    display: flex;
-  }
   .hotel-hero__item {
     display: flex;
+  }
+  .hotel-hero__elem {
+    margin-right: 369px;
+    margin-top: 204px;
+    margin-bottom: 204px;
+  }
+  .hotel-hero__list-picture {
+    gap: 32px;
   }
   .hotel__img {
     width: 436px;
     max-width: 436px;
+  }
+  .hotel-hero__txt {
+    width: 338px;
+    margin-top: -36px;
   }
 }
 .swiper {
