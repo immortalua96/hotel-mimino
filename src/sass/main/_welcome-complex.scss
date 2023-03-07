@@ -45,6 +45,8 @@
   }
   .welcome-container {
     padding: 80px 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -53,6 +55,7 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     padding: 100px 0;
+    margin-left: 32px;
   }
   .welcome-complex__title {
     width: 434px;
