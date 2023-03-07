@@ -22,16 +22,16 @@
   }
 }
 .section {
-  margin-top: 64px;
-  margin-bottom: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   @include screen(tablet) {
-      margin-top: 80px;
-        margin-bottom: 80px;
+      padding-top: 80px;
+        padding-bottom: 80px;
     }
   
     @include screen(desktop) {
-      margin-top: 94px;
-        margin-bottom: 94px;
+      padding-top: 94px;
+        padding-bottom: 94px;
     }
 }
 
@@ -46,7 +46,7 @@
   }
 
   @include screen(desktop) {
-    max-width: 1400px;
+    max-width: 1440px;
   }
 }
 

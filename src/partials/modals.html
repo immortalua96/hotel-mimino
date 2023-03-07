@@ -1,0 +1,290 @@
+<!-- !MODAL: Book a table -->
+<div class="modal" data-modal="modal-table">
+  <button type="button" class="modal__btn">
+    <svg class="modal__icon js-modal-close">
+      <use href="./images/icon/symbol-defs.svg#icon-close-modal"></use>
+    </svg>
+  </button>
+
+  <div class="modal__wrap">
+    <h2 class="modal__title">Book <i>a table</i></h2>
+
+    <form class="form" autocomplete="off">
+      <div class="form__wrap">
+        <!-- ?FIELD: Name -->
+        <label class="form__field">
+          <input
+            class="form__input"
+            placeholder="Your name"
+            name="name"
+            type="text"
+            pattern="^[a-zA-Zа-яА-Я]+"
+            minlength="3"
+          />
+          <span class="form__desc">Who should book a table for?</span>
+        </label>
+
+        <!-- ?FIELD: Number of people -->
+        <label class="form__field">
+          <div class="select-wrap">
+            <select class="form__select" name="number">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <span class="form__desc">Number of people</span>
+        </label>
+
+        <!-- ?FIELD: Date -->
+        <label class="form__field">
+          <input
+            class="form__input"
+            name="date"
+            type="date"
+            id="currentDateTable"
+          />
+          <span class="form__desc">What date to book?</span>
+        </label>
+
+        <!-- ?FIELD: Phone number -->
+        <label class="form__field">
+          <input
+            class="form__input"
+            name="phone"
+            type="tel"
+            placeholder="+38 . . ."
+            pattern="[\+]?[38]{2}?[0-9]{3}?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+            title="[+38xxxxxxxxxx]"
+            minlength="13"
+            maxlength="13"
+          />
+          <span class="form__desc">Phone number</span>
+        </label>
+
+        <button class="form__submit" type="submit">Make a reservation</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- !MODAL: Book a room -->
+<div class="modal" data-modal="modal-room">
+  <button type="button" class="modal__btn">
+    <svg class="modal__icon js-modal-close">
+      <use href="./images/icon/symbol-defs.svg#icon-close-modal"></use>
+    </svg>
+  </button>
+
+  <div class="modal__wrap">
+    <h2 class="modal__title">Book <i>a room</i></h2>
+
+    <form class="form" autocomplete="off">
+      <div class="form__wrap">
+        <!-- ?FIELD: Name -->
+        <label class="form__field">
+          <input
+            class="form__input"
+            placeholder="Your name"
+            name="name"
+            type="text"
+            pattern="^[a-zA-Zа-яА-Я]+"
+            minlength="3"
+          />
+          <span class="form__desc">Who should book a table for?</span>
+        </label>
+
+        <!-- ?FIELD: Phone number -->
+        <label class="form__field">
+          <input
+            class="form__input"
+            name="phone"
+            type="tel"
+            placeholder="+38 . . ."
+            pattern="[\+]?[38]{2}?[0-9]{3}?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+            title="[+38xxxxxxxxxx]"
+            minlength="12"
+            maxlength="12"
+          />
+          <span class="form__desc">Phone number</span>
+        </label>
+
+        <!-- ?FIELD: Date (current) -->
+        <label class="form__field">
+          <input
+            class="form__input"
+            name="dateCurrent"
+            type="date"
+            id="currentDateRoom"
+          />
+          <span class="form__desc">What date to book?</span>
+        </label>
+
+        <!-- ?FIELD: Date next -->
+        <label class="form__field">
+          <input
+            class="form__input form__input-icon"
+            name="dateNext"
+            type="date"
+            value="2023-03-25"
+          />
+          <span class="form__desc">Check-in date</span>
+        </label>
+
+        <!-- ?FIELD: Number category -->
+        <label class="form__field">
+          <div class="select-wrap">
+            <select class="form__select" name="category">
+              <option value="1">single suite</option>
+              <option value="2" selected>double suite</option>
+              <option value="4">multi-bed suite</option>
+            </select>
+          </div>
+          <span class="form__desc">Number category</span>
+        </label>
+      </div>
+      <button class="form__submit" type="submit">Make a reservation</button>
+    </form>
+  </div>
+</div>
+
+<!-- !MODAL: Price per room -->
+<div class="modal" data-modal="modal-price">
+  <button type="button" class="modal__btn">
+    <svg class="modal__icon js-modal-close">
+      <use href="./images/icon/symbol-defs.svg#icon-close-modal"></use>
+    </svg>
+  </button>
+
+  <div class="modal__wrap">
+    <h2 class="modal__title">Prices per room</h2>
+
+    <form class="form" autocomplete="off">
+      <div class="form__wrap">
+        <!-- ?FIELD: Number of nights -->
+        <label class="form__field">
+          <span class="form__lable">Double suite</span>
+          <div class="select-wrap">
+            <select class="form__select" name="category">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <span class="form__desc">Number of nights</span>
+        </label>
+
+        <!-- ?FIELD: Price -->
+        <label class="form__field form__field--self-bottom">
+          <input class="form__input" name="price" type="text" value="1000" />
+          <span class="form__desc">uah</span>
+        </label>
+      </div>
+      <button class="form__submit" type="submit">Make a reservation</button>
+    </form>
+  </div>
+</div>
+
+<!-- Подложка под модальным окном -->
+<div class="overlay js-overlay-modal"></div>
+
+<script type="module">
+  !(function (e) {
+    'function' != typeof e.matches &&
+      (e.matches =
+        e.msMatchesSelector ||
+        e.mozMatchesSelector ||
+        e.webkitMatchesSelector ||
+        function (e) {
+          for (
+            var t = this,
+              o = (t.document || t.ownerDocument).querySelectorAll(e),
+              n = 0;
+            o[n] && o[n] !== t;
+
+          )
+            ++n;
+          return Boolean(o[n]);
+        }),
+      'function' != typeof e.closest &&
+        (e.closest = function (e) {
+          for (var t = this; t && 1 === t.nodeType; ) {
+            if (t.matches(e)) return t;
+            t = t.parentNode;
+          }
+          return null;
+        });
+  })(window.Element.prototype);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    /* Записываем в переменные массив элементов-кнопок и подложку.
+      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+    var modalButtons = document.querySelectorAll('.js-open-modal'),
+      overlay = document.querySelector('.js-overlay-modal'),
+      closeButtons = document.querySelectorAll('.js-modal-close');
+
+    /* Перебираем массив кнопок */
+    modalButtons.forEach(function (item) {
+      /* Назначаем каждой кнопке обработчик клика */
+      item.addEventListener('click', function (e) {
+        /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+            Нужно подстраховаться. */
+        e.preventDefault();
+
+        /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+            и будем искать модальное окно с таким же атрибутом. */
+        var modalId = this.getAttribute('data-modal'),
+          modalElem = document.querySelector(
+            '.modal[data-modal="' + modalId + '"]'
+          );
+
+        /* После того как нашли нужное модальное окно, добавим классы
+            подложке и окну чтобы показать их. */
+        modalElem.classList.add('active');
+        overlay.classList.add('active');
+      }); // end click
+    }); // end foreach
+
+    closeButtons.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        var parentModal = this.closest('.modal');
+
+        parentModal.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    }); // end foreach
+
+    document.body.addEventListener(
+      'keyup',
+      function (e) {
+        var key = e.keyCode;
+
+        if (key == 27) {
+          document.querySelector('.modal.active').classList.remove('active');
+          document.querySelector('.overlay').classList.remove('active');
+        }
+      },
+      false
+    );
+
+    overlay.addEventListener('click', function () {
+      document.querySelector('.modal.active').classList.remove('active');
+      this.classList.remove('active');
+    });
+  }); // end ready
+</script>
+
+<script type="module">
+  document.getElementById('currentDateTable').value = new Date()
+    .toISOString()
+    .substring(0, 10);
+  document.getElementById('currentDateRoom').value = new Date()
+    .toISOString()
+    .substring(0, 10);
+</script>

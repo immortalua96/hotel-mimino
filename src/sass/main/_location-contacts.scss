@@ -1,0 +1,136 @@
+.location__section{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+@media screen and (min-width: 768px){
+    .location__section{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+@media screen and (min-width: 1440px){
+    .location__section{
+        padding-top: 100px;
+    padding-bottom: 100px;
+    }
+}
+.location{
+    font-weight: 500;
+font-size: 40px;
+line-height: 1;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: #121212;
+} 
+@media screen and (min-width: 1440px) {
+    .location{
+        position: absolute;
+    left: 736px;
+    top: 0px;
+    }
+}
+
+.location__maps{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    
+}
+
+@media screen and (min-width: 768px){
+    .location__maps{
+        margin-top: 40px;
+    }
+}
+@media screen and (min-width: 1440px){
+    .location__maps{
+        flex-direction: row;
+        gap: 32px;
+        margin-top: 0px;
+    }
+}
+.maps{
+    box-shadow: -14px 24px 68px -16px rgba(0, 0, 0, 0.12);
+}
+@media screen and (min-width: 768px){
+    .maps{
+        width: 704px;
+        height: 576px;
+    }}
+    @media screen and (min-width: 1440px){
+        .maps{
+            width: 640px;
+            height: 524px;
+        }}
+.location__first {
+    margin-top: 32px;
+    
+}
+@media screen and (min-width: 768px){
+    .location__first{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 1440px){
+    .location__first{
+        justify-content: center;
+        gap: 70px;
+        margin-top: 0px;
+        align-items: flex-end;
+    }
+}
+.location__nav {
+    font-weight: 400;
+font-size: 18px;
+line-height: 1.33;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+
+color: #000000;
+}
+.location__second{
+    margin-top: 28px;
+}
+@media screen and (min-width: 768px){
+    .location__second{
+        margin-top: 0px;
+    }
+}
+@media screen and (min-width: 1440px){
+    .location__second{
+        display: flex;
+        gap: 12px;
+    }
+}
+.call__us {
+    font-weight: 500;
+font-size: 14px;
+line-height: 1.29;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+margin-bottom: 12px;
+color: #121212;
+}
+@media screen and (min-width: 1440px){
+    .call__us{
+        margin-bottom: 0px;
+    }
+}
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+@media screen and (min-width: 768px){
+    .contacts__list{
+        gap: 2px;
+    }
+}
+.location__number {
+    font-weight: 400;
+font-size: 14px;
+line-height: 1.29;
+letter-spacing: -0.02em;
+color: #121212;
+}

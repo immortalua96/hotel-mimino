@@ -1,0 +1,241 @@
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: opacity var(--animation-for-hover),
+    visibility var(--animation-for-hover);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  color: transparent;
+  opacity: 1;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-image: url(../images/icon/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 21px 21px;
+}
+
+.select-wrap {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 2px;
+
+    background-image: url('../images/icon/chevron-down.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.modal {
+  padding: 24px;
+  padding-bottom: 40px;
+  color: $text-color-secondary;
+  background: #121212;
+  border-radius: 2px;
+  padding: 24px;
+  padding-bottom: 40px;
+
+  width: 100%;
+  max-width: 335px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  transition: opacity var(--animation-for-hover),
+    visibility var(--animation-for-hover);
+
+  @include screen(tablet) {
+    padding: 32px;
+    padding-bottom: 60px;
+    max-width: 628px;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: $bg-color-dark;
+    position: absolute;
+    border: none;
+    top: 14px;
+    right: 14px;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    stroke: var(--text-color-secondary);
+
+    @include screen(tablet) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.36;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    @include screen(tablet) {
+      font-size: 36px;
+      line-height: 1.11;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  &__wrap {
+    margin-bottom: 40px;
+
+    @include screen(tablet) {
+      margin-bottom: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px 32px;
+    }
+  }
+
+  &__field {
+    display: block;
+    margin-bottom: 32px;
+
+    &--self-bottom {
+      align-self: flex-end;
+    }
+
+    @include screen(tablet) {
+      width: 266px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__lable {
+    color: $text-color-secondary;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    color: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    width: 100%;
+    height: 36px;
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    background-color: $bg-color-dark;
+    border: none;
+    border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
+
+    &::placeholder {
+      color: $bg-color-light;
+      font-size: 14px;
+      line-height: 1.29;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__select {
+    display: block;
+    appearance: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    width: 100%;
+    height: 36px;
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    background-color: $bg-color-dark;
+    border: none;
+    border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
+  }
+
+  &__desc {
+    color: #d8d7d7;
+    display: block;
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  &__submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 14px 48px;
+    color: $text-color-secondary;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    background-color: $border-color-dark;
+    border: 0.8px solid $border-color-light;
+    border-radius: 32px;
+  }
+}
