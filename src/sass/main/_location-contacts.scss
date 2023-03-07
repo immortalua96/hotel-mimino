@@ -1,6 +1,7 @@
 .location__section{
     padding-top: 64px;
     padding-bottom: 64px;
+    position: relative;
 }
 @media screen and (min-width: 768px){
     .location__section{
@@ -26,7 +27,7 @@ color: #121212;
     .location{
         position: absolute;
     left: 736px;
-    top: 0px;
+    top: 100px;
     }
 }
 
