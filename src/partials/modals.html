@@ -1,34 +1,33 @@
-<!-- MODAL: Book a table -->
-<div class="modal modal-table" data-modal="modal-table">
-  <button type="button" class="modal-table__close-btn">
-    <svg class="modal-table__close-icon js-modal-close">
+<!-- !MODAL: Book a table -->
+<div class="modal" data-modal="modal-table">
+  <button type="button" class="modal__btn">
+    <svg class="modal__icon js-modal-close">
       <use href="./images/icon/symbol-defs.svg#icon-close-modal"></use>
     </svg>
   </button>
 
-  <div class="modal-table__wrap">
-    <h2 class="modal-table__title">Book <i>a table</i></h2>
+  <div class="modal__wrap">
+    <h2 class="modal__title">Book <i>a table</i></h2>
 
-    <form class="modal-table__form table-form" autocomplete="off">
-      <div class="table-form__wrap">
-        <!-- FIELD: Name -->
-        <label class="table-form__field">
+    <form class="form" autocomplete="off">
+      <div class="form__wrap">
+        <!-- ?FIELD: Name -->
+        <label class="form__field">
           <input
-            class="table-form__input"
+            class="form__input"
             placeholder="Your name"
             name="name"
             type="text"
-            required
             pattern="^[a-zA-Zа-яА-Я]+"
             minlength="3"
           />
-          <span class="table-form__desc">Who should book a table for?</span>
+          <span class="form__desc">Who should book a table for?</span>
         </label>
 
-        <!-- FIELD: Number of people -->
-        <label class="table-form__field">
+        <!-- ?FIELD: Number of people -->
+        <label class="form__field">
           <div class="select-wrap">
-            <select class="table-form__select" name="number">
+            <select class="form__select" name="number">
               <option value="1">1</option>
               <option value="2" selected>2</option>
               <option value="3">3</option>
@@ -37,150 +36,139 @@
               <option value="6">6</option>
             </select>
           </div>
-          <span class="table-form__desc">Number of people</span>
+          <span class="form__desc">Number of people</span>
         </label>
 
-        <!-- FIELD: Date -->
-        <label class="table-form__field">
-          <div class="input-wrap">
-            <input
-              class="table-form__input"
-              name="date"
-              type="date"
-              id="currentDateTable"
-            />
-          </div>
-          <span class="table-form__desc">What date to book?</span>
-        </label>
-
-        <!-- FIELD: Phone number -->
-        <label class="table-form__field">
+        <!-- ?FIELD: Date -->
+        <label class="form__field">
           <input
-            class="table-form__input"
+            class="form__input"
+            name="date"
+            type="date"
+            id="currentDateTable"
+          />
+          <span class="form__desc">What date to book?</span>
+        </label>
+
+        <!-- ?FIELD: Phone number -->
+        <label class="form__field">
+          <input
+            class="form__input"
             name="phone"
             type="tel"
-            placeholder="+38 ()"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            title="[xxx-xxx-xxxxx]"
-            minlength="12"
-            maxlength="12"
+            placeholder="+38 . . ."
+            pattern="[\+]?[38]{2}?[0-9]{3}?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+            title="[+38xxxxxxxxxx]"
+            minlength="13"
+            maxlength="13"
           />
-          <span class="table-form__desc">Phone number</span>
+          <span class="form__desc">Phone number</span>
         </label>
 
-        <button class="table-form__submit-btn" type="submit">
-          Make a reservation
-        </button>
+        <button class="form__submit" type="submit">Make a reservation</button>
       </div>
     </form>
   </div>
 </div>
 
-<!-- MODAL: Book a room -->
-<div class="modal modal-room" data-modal="modal-room">
-  <button type="button" class="modal-room__close-btn">
-    <svg class="modal-room__close-icon js-modal-close">
+<!-- !MODAL: Book a room -->
+<div class="modal" data-modal="modal-room">
+  <button type="button" class="modal__btn">
+    <svg class="modal__icon js-modal-close">
       <use href="./images/icon/symbol-defs.svg#icon-close-modal"></use>
     </svg>
   </button>
 
-  <div class="modal-room__wrap">
-    <h2 class="modal-room__title">Book <i>a room</i></h2>
+  <div class="modal__wrap">
+    <h2 class="modal__title">Book <i>a room</i></h2>
 
-    <form class="modal-room__form room-form" autocomplete="off">
-      <div class="room-form__wrap">
-        <!-- FIELD: Name -->
-        <label class="room-form__field">
+    <form class="form" autocomplete="off">
+      <div class="form__wrap">
+        <!-- ?FIELD: Name -->
+        <label class="form__field">
           <input
-            class="room-form__input"
+            class="form__input"
             placeholder="Your name"
             name="name"
             type="text"
-            required
             pattern="^[a-zA-Zа-яА-Я]+"
             minlength="3"
           />
-          <span class="room-form__desc">Who should book a table for?</span>
+          <span class="form__desc">Who should book a table for?</span>
         </label>
 
-        <!-- FIELD: Phone number -->
-        <label class="room-form__field">
+        <!-- ?FIELD: Phone number -->
+        <label class="form__field">
           <input
-            class="room-form__input"
+            class="form__input"
             name="phone"
             type="tel"
-            placeholder="+38 ()"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            title="[xxx-xxx-xxxxx]"
+            placeholder="+38 . . ."
+            pattern="[\+]?[38]{2}?[0-9]{3}?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+            title="[+38xxxxxxxxxx]"
             minlength="12"
             maxlength="12"
           />
-          <span class="room-form__desc">Phone number</span>
+          <span class="form__desc">Phone number</span>
         </label>
 
-        <!-- FIELD: Date (current) -->
-        <label class="room-form__field">
-          <div class="input-wrap">
-            <input
-              class="room-form__input"
-              name="date"
-              type="date"
-              id="currentDateRoom"
-            />
-          </div>
-          <span class="room-form__desc">What date to book?</span>
+        <!-- ?FIELD: Date (current) -->
+        <label class="form__field">
+          <input
+            class="form__input"
+            name="dateCurrent"
+            type="date"
+            id="currentDateRoom"
+          />
+          <span class="form__desc">What date to book?</span>
         </label>
 
-        <!-- FIELD: Date next -->
-        <label class="room-form__field">
-          <div class="input-wrap">
-            <input
-              class="room-form__input room-form__input-icon"
-              name="date"
-              type="date"
-              value="2023-03-25"
-            />
-          </div>
-          <span class="room-form__desc">Check-in date</span>
+        <!-- ?FIELD: Date next -->
+        <label class="form__field">
+          <input
+            class="form__input form__input-icon"
+            name="dateNext"
+            type="date"
+            value="2023-03-25"
+          />
+          <span class="form__desc">Check-in date</span>
         </label>
 
-        <!-- FIELD: Number category -->
-        <label class="room-form__field">
+        <!-- ?FIELD: Number category -->
+        <label class="form__field">
           <div class="select-wrap">
-            <select class="room-form__select" name="category">
+            <select class="form__select" name="category">
               <option value="1">single suite</option>
               <option value="2" selected>double suite</option>
               <option value="4">multi-bed suite</option>
             </select>
           </div>
-          <span class="room-form__desc">Number category</span>
+          <span class="form__desc">Number category</span>
         </label>
       </div>
-      <button class="room-form__submit-btn" type="submit">
-        Make a reservation
-      </button>
+      <button class="form__submit" type="submit">Make a reservation</button>
     </form>
   </div>
 </div>
 
-<!-- MODAL: Price per room -->
-<div class="modal modal-price" data-modal="modal-price">
-  <button type="button" class="modal-price__close-btn">
-    <svg class="modal-price__close-icon js-modal-close">
+<!-- !MODAL: Price per room -->
+<div class="modal" data-modal="modal-price">
+  <button type="button" class="modal__btn">
+    <svg class="modal__icon js-modal-close">
       <use href="./images/icon/symbol-defs.svg#icon-close-modal"></use>
     </svg>
   </button>
 
-  <div class="modal-price__wrap">
-    <h2 class="modal-price__title">Prices per room</h2>
+  <div class="modal__wrap">
+    <h2 class="modal__title">Prices per room</h2>
 
-    <form class="modal-price__form price-form" autocomplete="off">
-      <div class="price-form__wrap">
-        <!-- FIELD: Number of nights -->
-        <label class="price-form__field">
-          <span class="price-form__lable">Double suite</span>
+    <form class="form" autocomplete="off">
+      <div class="form__wrap">
+        <!-- ?FIELD: Number of nights -->
+        <label class="form__field">
+          <span class="form__lable">Double suite</span>
           <div class="select-wrap">
-            <select class="price-form__select" name="category">
+            <select class="form__select" name="category">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -188,24 +176,16 @@
               <option value="5">5</option>
             </select>
           </div>
-          <span class="price-form__desc">Number of nights</span>
+          <span class="form__desc">Number of nights</span>
         </label>
 
-        <!-- FIELD: Price -->
-        <label class="price-form__field price-form__field--self-down">
-          <input
-            class="price-form__input"
-            name="price"
-            type="number"
-            min="1000"
-            value="1000"
-          />
-          <span class="price-form__desc">uah</span>
+        <!-- ?FIELD: Price -->
+        <label class="form__field form__field--self-bottom">
+          <input class="form__input" name="price" type="text" value="1000" />
+          <span class="form__desc">uah</span>
         </label>
       </div>
-      <button class="price-form__submit-btn" type="submit">
-        Make a reservation
-      </button>
+      <button class="form__submit" type="submit">Make a reservation</button>
     </form>
   </div>
 </div>
@@ -305,9 +285,6 @@
     .toISOString()
     .substring(0, 10);
   document.getElementById('currentDateRoom').value = new Date()
-    .toISOString()
-    .substring(0, 10);
-  document.getElementById('currentDatePrice').value = new Date()
     .toISOString()
     .substring(0, 10);
 </script>
