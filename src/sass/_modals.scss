@@ -1,6 +1,4 @@
-/* Стили для подложки */
 .overlay {
-  /* Скрываем подложку  */
   opacity: 0;
   visibility: hidden;
 
@@ -11,45 +9,28 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: 0.3s all;
+  transition: opacity var(--animation-for-hover),
+    visibility var(--animation-for-hover);
 }
 
-/* Стили для модальных окон */
-.modal {
-  /* Скрываем окна  */
-  opacity: 0;
-  visibility: hidden;
-
-  /*  Установаем ширину окна  */
-  // width: 100%;
-  // max-width: 335px;
-
-  /*  Центрируем и задаем z-index */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 30; /* Должен быть выше чем у подложки*/
-
-  /*  Побочные стили   */
-  // box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  // text-align: center;
-  // padding: 30px;
-  // border-radius: 3px;
-  // background-color: #fff;
-  transition: 0.3s all;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-/* Стили для активных классов подложки и окна */
-.modal.active,
-.overlay.active {
+input[type='date']::-webkit-calendar-picker-indicator {
+  color: transparent;
   opacity: 1;
-  visibility: visible;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-image: url(../images/icon/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 21px 21px;
 }
 
-// =================================
-// Common
-// =================================
 .select-wrap {
   position: relative;
 
@@ -60,7 +41,7 @@
     height: 20px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 2px;
 
     background-image: url('../images/icon/chevron-down.svg');
     background-position: center;
@@ -68,29 +49,10 @@
   }
 }
 
-.input-wrap {
-  position: relative;
-
-  &::after {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    background-image: url('../images/icon/chevron-down.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-// =================================
-// Book a Table
-// =================================
-
-.modal-table {
+.modal {
+  padding: 24px;
+  padding-bottom: 40px;
+  color: $text-color-secondary;
   background: #121212;
   border-radius: 2px;
   padding: 24px;
@@ -98,6 +60,18 @@
 
   width: 100%;
   max-width: 335px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  transition: opacity var(--animation-for-hover),
+    visibility var(--animation-for-hover);
 
   @include screen(tablet) {
     padding: 32px;
@@ -107,16 +81,13 @@
 
   &__wrap {
     position: relative;
-    color: $text-color-secondary;
   }
 
-  &__close-btn {
+  &__btn {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 28px;
-    // height: 28px;
     padding: 0;
     background-color: $bg-color-dark;
     position: absolute;
@@ -125,7 +96,7 @@
     right: 14px;
   }
 
-  &__close-icon {
+  &__icon {
     width: 14px;
     height: 14px;
     stroke: var(--text-color-secondary);
@@ -152,7 +123,13 @@
   }
 }
 
-.table-form {
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
@@ -170,407 +147,16 @@
   }
 
   &__field {
-    position: relative;
     display: block;
     margin-bottom: 32px;
 
-    @include screen(tablet) {
-      width: 266px;
-      margin-bottom: 0;
-    }
-  }
-
-  &__choice-icon {
-    position: absolute;
-    top: 3px;
-    right: 4px;
-    stroke: var(--text-color-secondary);
-    width: 10px;
-    height: 10px;
-  }
-
-  &__lable {
-    display: block;
-  }
-
-  &__input {
-    appearance: none;
-    color: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-
-    width: 100%;
-    height: 36px;
-    margin-bottom: 8px;
-    padding-bottom: 18px;
-    background-color: $bg-color-dark;
-    border: none;
-    border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
-
-    // transition: border-color var(--transition-dur-func);
-
-    // &:focus {
-    //   border-color: var(--border-modal-active-color);
-    //   outline: none;
-    // }
-
-    &::placeholder {
-      color: $bg-color-light;
-      font-size: 14px;
-      line-height: 1.29;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-    }
-  }
-
-  &__select {
-    display: block;
-    appearance: none;
-    color: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    background-image: url('../images/icon/chevron-down.svg');
-    background-position: right top;
-    background-repeat: no-repeat;
-
-    width: 100%;
-    height: 36px;
-    margin-bottom: 8px;
-    padding-bottom: 18px;
-    background-color: $bg-color-dark;
-    border: none;
-    border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
-  }
-
-  &__desc {
-    color: #d8d7d7;
-    display: block;
-    font-size: 8px;
-    line-height: 1.5;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-
-  &__submit-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    // width: 235px;
-    padding: 14px 48px;
-    color: $text-color-secondary;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    background-color: $border-color-dark;
-    border: 0.8px solid $border-color-light;
-    border-radius: 32px;
-  }
-}
-
-// =================================
-// Book a Room
-// =================================
-
-.modal-room {
-  background: #121212;
-  border-radius: 2px;
-  padding: 24px;
-  padding-bottom: 40px;
-
-  width: 100%;
-  max-width: 335px;
-
-  @include screen(tablet) {
-    padding: 32px;
-    padding-bottom: 60px;
-    max-width: 628px;
-  }
-
-  &__wrap {
-    position: relative;
-    color: $text-color-secondary;
-  }
-
-  &__close-btn {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    background-color: $bg-color-dark;
-    position: absolute;
-    border: none;
-    top: 14px;
-    right: 14px;
-  }
-
-  &__close-icon {
-    width: 14px;
-    height: 14px;
-    stroke: var(--text-color-secondary);
-
-    @include screen(tablet) {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  &__title {
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 1.36;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-
-    @include screen(tablet) {
-      font-size: 36px;
-      line-height: 1.11;
-      margin-bottom: 60px;
-    }
-  }
-}
-
-.room-form {
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-
-  &__wrap {
-    margin-bottom: 40px;
-
-    @include screen(tablet) {
-      margin-bottom: 60px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 60px 32px;
-    }
-  }
-
-  &__field {
-    position: relative;
-    display: block;
-    margin-bottom: 32px;
-
-    @include screen(tablet) {
-      width: 266px;
-      margin-bottom: 0;
-    }
-  }
-
-  &__choice-icon {
-    position: absolute;
-    top: 3px;
-    right: 4px;
-    stroke: var(--text-color-secondary);
-    width: 10px;
-    height: 10px;
-  }
-
-  &__lable {
-    display: block;
-  }
-
-  &__input {
-    appearance: none;
-    color: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-
-    width: 100%;
-    height: 36px;
-    margin-bottom: 8px;
-    padding-bottom: 18px;
-    background-color: $bg-color-dark;
-    border: none;
-    border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
-
-    // transition: border-color var(--transition-dur-func);
-
-    // &:focus {
-    //   border-color: var(--border-modal-active-color);
-    //   outline: none;
-    // }
-
-    &::placeholder {
-      color: $bg-color-light;
-      font-size: 14px;
-      line-height: 1.29;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-    }
-  }
-
-  // &__select {
-  //   display: block;
-  //   appearance: none;
-  //   color: inherit;
-  //   font-weight: 500;
-  //   font-size: 14px;
-  //   line-height: 1.29;
-  //   letter-spacing: -0.02em;
-  //   text-transform: uppercase;
-  //   background-image: url('../images/icon/chevron-down.svg');
-  //   background-position: right top;
-  //   background-repeat: no-repeat;
-
-  //   width: 100%;
-  //   height: 36px;
-  //   margin-bottom: 8px;
-  //   padding-bottom: 18px;
-  //   background-color: $bg-color-dark;
-  //   border: none;
-  //   border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
-  // }
-  &__select {
-    display: block;
-    appearance: none;
-    color: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-
-    width: 100%;
-    height: 36px;
-    margin-bottom: 8px;
-    padding-bottom: 18px;
-    background-color: $bg-color-dark;
-    border: none;
-    border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
-  }
-
-  &__desc {
-    color: #d8d7d7;
-    display: block;
-    font-size: 8px;
-    line-height: 1.5;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-
-  &__submit-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    // width: 235px;
-    padding: 14px 48px;
-    color: $text-color-secondary;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    background-color: $border-color-dark;
-    border: 0.8px solid $border-color-light;
-    border-radius: 32px;
-  }
-}
-
-// =================================
-// Price per Room
-// =================================
-
-.modal-price {
-  background: #121212;
-  border-radius: 2px;
-  padding: 24px;
-  padding-bottom: 40px;
-
-  width: 100%;
-  max-width: 335px;
-
-  @include screen(tablet) {
-    padding: 32px;
-    padding-bottom: 60px;
-    max-width: 628px;
-  }
-
-  &__wrap {
-    position: relative;
-    color: $text-color-secondary;
-  }
-
-  &__close-btn {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    background-color: $bg-color-dark;
-    position: absolute;
-    border: none;
-    top: 14px;
-    right: 14px;
-  }
-
-  &__close-icon {
-    width: 14px;
-    height: 14px;
-    stroke: var(--text-color-secondary);
-
-    @include screen(tablet) {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  &__title {
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 1.36;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-
-    @include screen(tablet) {
-      font-size: 36px;
-      line-height: 1.11;
-      margin-bottom: 60px;
-    }
-  }
-}
-
-.price-form {
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-
-  &__wrap {
-    margin-bottom: 40px;
-
-    @include screen(tablet) {
-      margin-bottom: 60px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 32px;
-    }
-  }
-
-  &__field {
-    // position: relative;
-    display: block;
-    margin-bottom: 32px;
-
-    &--self-down {
+    &--self-bottom {
       align-self: flex-end;
     }
 
     @include screen(tablet) {
       width: 266px;
-      // margin-bottom: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -601,43 +187,15 @@
     border: none;
     border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
 
-    // transition: border-color var(--transition-dur-func);
-
-    // &:focus {
-    //   border-color: var(--border-modal-active-color);
-    //   outline: none;
-    // }
-
-    // &::placeholder {
-    //   color: $bg-color-light;
-    //   font-size: 14px;
-    //   line-height: 1.29;
-    //   letter-spacing: -0.02em;
-    //   text-transform: uppercase;
-    // }
+    &::placeholder {
+      color: $bg-color-light;
+      font-size: 14px;
+      line-height: 1.29;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
   }
 
-  // &__select {
-  //   display: block;
-  //   appearance: none;
-  //   color: inherit;
-  //   font-weight: 500;
-  //   font-size: 14px;
-  //   line-height: 1.29;
-  //   letter-spacing: -0.02em;
-  //   text-transform: uppercase;
-  //   background-image: url('../images/icon/chevron-down.svg');
-  //   background-position: right top;
-  //   background-repeat: no-repeat;
-
-  //   width: 100%;
-  //   height: 36px;
-  //   margin-bottom: 8px;
-  //   padding-bottom: 18px;
-  //   background-color: $bg-color-dark;
-  //   border: none;
-  //   border-bottom: 0.8px solid rgba(247, 247, 247, 0.2);
-  // }
   &__select {
     display: block;
     appearance: none;
@@ -666,7 +224,7 @@
     text-transform: uppercase;
   }
 
-  &__submit-btn {
+  &__submit {
     display: block;
     margin-left: auto;
     margin-right: auto;
