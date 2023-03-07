@@ -9,7 +9,8 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: 0.3s all;
+  transition: opacity var(--animation-for-hover),
+    visibility var(--animation-for-hover);
 }
 
 select {
@@ -49,6 +50,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .modal {
+  padding: 24px;
+  padding-bottom: 40px;
   color: $text-color-secondary;
   background: #121212;
   border-radius: 2px;
@@ -67,7 +70,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
   transform: translate(-50%, -50%);
   z-index: 30; /* Должен быть выше чем у подложки*/
 
-  transition: 0.3s all;
+  transition: opacity var(--animation-for-hover),
+    visibility var(--animation-for-hover);
 
   @include screen(tablet) {
     padding: 32px;
