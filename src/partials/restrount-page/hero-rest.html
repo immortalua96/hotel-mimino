@@ -1,21 +1,112 @@
-<section class="restaurant-hero">
+<section class="rest__hero section">
   <div class="container">
-    <h1 class="restaurant-hero-title">Restaurant</h1>
+    <div class="rest-banner">
+      <div class="rest-wrap">
+        <h1 class="restaurant-hero-title">Restaurant</h1>
 
-    <ul class="restaurant-hero-btn-wrap">
-      <li>
-        <a href="" class="btn-booktable restaurant-hero-btn">book a table</a>
-      </li>
-      <li>
-        <a href="#view-a-menu" class="restaurant-hero-btn">View a menu</a>
-      </li>
-    </ul>
+        <ul class="restaurant-hero-btn-wrap">
+          <li>
+            <button
+              class="restaurant-hero-btn js-open-modal"
+              data-modal="modal-room"
+            >
+              book a table
+            </button>
+          </li>
+          <li>
+            <a href="#view-a-menu" class="restaurant-hero-btn"> View a menu </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="hero__list">
+        <li>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /src/images/hero-restaurant/image-desk@1.jpg 1x,
+                /src/images/hero-restaurant/image-desk@2.jpg 2x
+              "
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="
+                /src/images/hero-restaurant/image1m@1x.jpg 1x,
+                /src/images/hero-restaurant/image1m@2x.jpg 2x
+              "
+              type="image/jpg"
+            />
+            <img
+              class="hero__img"
+              src="/src/images/hero-restaurant/image1m@1x.jpg"
+              alt="restaurant"
+              width="250px"
+            />
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /src/images/hero-restaurant/image-desk2@1.jpg 1x,
+                /src/images/hero-restaurant/image-desk2@2.jpg 2x
+              "
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="
+                /src/images/hero-restaurant/image2m@1x.jpg 1x,
+                /src/images/hero-restaurant/image2m@2x.jpg 2x
+              "
+              type="image/jpg"
+            />
+            <img
+              class="hero__img"
+              src="/src/images/hero-restaurant/image2m@1x.jpg"
+              alt="restaurant"
+              width="250px"
+            />
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /src/images/hero-restaurant/image-desk3@1.jpg 1x,
+                /src/images/hero-restaurant/image-desk3@2.jpg 2x
+              "
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="
+                /src/images/hero-restaurant/image3m@1x.jpg 1x,
+                /src/images/hero-restaurant/image3m@2x.jpg 2x
+              "
+              type="image/jpg"
+            />
+            <img
+              class="hero__img"
+              src="/src/images/hero-restaurant/image3m@1x.jpg"
+              alt="restaurant"
+              width="250px"
+            />
+          </picture>
+        </li>
+      </ul>
+    </div>
 
     <p class="restaurant-hero-text">
-      Whether you're in the mood for a hearty breakfast, a light lunch, or a
-      romantic dinner, our menu has something for everyone.
+      Whether you're in the mood for a hearty breakfast, a light lunch, or
+      <span>a romantic dinner</span>, our menu has something for everyone.
     </p>
-    <div class="slider">
+
+    <!-- <div class="slider">
       <div class="slider__item filter">
         <img src="/src/images/hero-restaurant/image1m@1x.jpg" alt="" />
       </div>
@@ -25,6 +116,6 @@
       <div class="slider__item filter">
         <img src="/src/images/hero-restaurant/image3m@1x.jpg" alt="" />
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
