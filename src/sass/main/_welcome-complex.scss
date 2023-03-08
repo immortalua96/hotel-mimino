@@ -1,5 +1,5 @@
 @media screen and (max-width: 767px) {
-  .container {
+  .welcome-container {
     max-width: 335px;
 
     margin: 64px 0;
@@ -43,11 +43,19 @@
     letter-spacing: -0.02em;
     padding-bottom: 50px;
   }
-  .container {
-    padding: 80px 0;
+  .welcome-container {
+    
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1440px) {
+  .welcome-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: 32px;
+  }
   .welcome-complex__title {
     width: 434px;
     font-size: 36px;
@@ -58,12 +66,7 @@
   .welcome-complex__text {
     width: 437px;
   }
-  .container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    padding: 100px 0;
-  }
+
   .welcome-complex__info {
     padding-left: 32px;
   }
