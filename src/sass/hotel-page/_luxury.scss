@@ -1,7 +1,5 @@
 // luxury
-.section {}
 
-.container {}
 
 .ul__img__room
 {
@@ -11,6 +9,7 @@
 /* tablet screen */
 @media screen and (min-width: 768px) {
 .ul__img__room {
+    gap: 32px;
     // flex-direction: column;
 }
 }
@@ -26,7 +25,7 @@
     max-width:max-content}
 }
 
-.list {}
+
 
 .div__img__room{
     display: flex;
@@ -42,7 +41,12 @@
 }
 }
 
-
+/* tablet screen */
+@media screen and (min-width: 768px) {
+    .kitchen__luxery__img {
+        margin-left: 150px;
+    }
+}
 
 /* desctop screen */
 @media screen and (min-width: 1440px) {
@@ -74,8 +78,28 @@
 @media screen and (min-width: 768px) {
 .bathroom__laxury__room__img {
 max-width: max-content;
+margin-left: 32px;
 }
 }
+/* tablet screen */
+@media screen and (min-width: 768px) {
+ .bathroom__img {margin-left: -85px;}
+}
+
+/* tablet screen */
+@media screen and (min-width: 768px) {
+ .laxury__room__img{
+    margin-right: 32px;
+ }
+}
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+.laxury__room__img {
+    margin-right: auto;
+}
+}
+
+
 
 /* desctop screen */
 @media screen and (min-width: 1200px) {
@@ -87,7 +111,14 @@ max-width: max-content;
  
 /* tablet screen */
 @media screen and (min-width: 768px) {
-.kitchen__luxery__room__img {max-width: max-content;}
+.kitchen__luxery__room__img {max-width: max-content;
+margin-left: 32px;}
+}
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+.kitchen__luxery__room__img {
+    margin-left: auto;
+}
 }
 
 
@@ -297,30 +328,33 @@ display: none;
  margin-left: auto;
  }
 }
-// /* tablet screen */
-// @media screen and (min-width: 768px)and (max-width: 1439px) {
-// .room__img__list__tab__luxery {
-//         flex-direction: row-reverse;
-// }
-// }
+/* tablet screen */
+@media screen and (min-width: 768px)and (max-width: 1439px) {
+.room__img__list__tab__luxery {
+        flex-direction: row-reverse;
+}
+}
 
-// /* desctop screen */
-// @media screen and (min-width: 1440px) {
-// .room__img__list__tab__luxery {
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+.room__img__list__tab__luxery {
+    margin-left: auto;
 
-// }
-// }
-// /* tablet screen */
-// @media screen and (min-width: 768px) {
-// .ul__img__room__tab__luxery {
-//     flex-direction: column;
-// }
-// }
+}
+}
+/* tablet screen */
+@media screen and (min-width: 768px) {
+.ul__img__room__tab__luxery {
+    flex-direction:column-reverse;
+}
+}
 
-// /* desctop screen */
-// @media screen and (min-width: 1440px) {
-//  .ul__img__room__tab__luxery {}
-// }
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+ .ul__img__room__tab__luxery {
+        flex-direction: row;
+ }
+}
 
 
 
@@ -337,12 +371,16 @@ display: none;
 // @media screen and (min-width: 1440px) {
 //     .room__img__list__tab__triple {}
 // }
-// /* tablet screen */
-// @media screen and (min-width: 768px) {
-//     .room__img__list__tab__seater {}
-// }
+/* tablet screen */
+@media screen and (min-width: 768px) {
+    .room__img__list__tab__seater {
+            flex-direction: row-reverse;
+    }
+}
 
-// /* desctop screen */
-// @media screen and (min-width: 1440px) {
-//     .room__img__list__tab__seater {}
-// }
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+    .room__img__list__tab__seater {
+            flex-direction: row;
+    }
+}
