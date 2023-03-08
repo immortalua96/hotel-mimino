@@ -1,4 +1,4 @@
-.header {
+.header{
   position: absolute;
   width: 100%;
   border-bottom: 0.5px solid rgba(18, 18, 18, 0.3);
@@ -31,6 +31,11 @@
     text-transform: uppercase;
     color: var(--border-color-light);
   }
+    .header_link.hotel {
+      
+      color: var(--border-color-dark);
+    }
+
 
   .current.header_link::after {
     content: "";
@@ -42,9 +47,21 @@
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background-color: var(--text-color-primary);
+    background-color: var(--bg-color-light);
   }
 
+    .current.header_link.hotel::after {
+      content: "";
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--border-color-dark);
+    }
 
   .header_media {
    display: flex;
