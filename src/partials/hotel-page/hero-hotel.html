@@ -2,16 +2,22 @@
   <div class="container">
     <div class="hotel-hero__item">
       <div class="hotel-hero__elem">
-    <h1 class="hotel-hero__title">Hotel</h1>
-    <ul class="hotel-hero__list-btn">
-      <li class="hotel-hero__element-btn"><a class="js-open-modal" data-modal="modal-room" href="">BOOK A ROOM</a></li>
-      <li class="hotel-hero__element-btn hotel-hero__btn--right">
-        <a href=""> VIEW PRICES</a>
-      </li>
-    </ul>
-  </div>
-    <ul class="hotel-hero__list-picture">
-      <!-- <li>
+        <h1 class="hotel-hero__title">Hotel</h1>
+        <ul class="hotel-hero__list-btn">
+          <li class="hotel-hero__element-btn">
+            <a class="js-open-modal" data-modal="modal-room" href=""
+              >BOOK A ROOM</a
+            >
+          </li>
+          <li class="hotel-hero__element-btn hotel-hero__btn--right">
+            <a class="js-open-modal" data-modal="modal-price" href="">
+              VIEW PRICES</a
+            >
+          </li>
+        </ul>
+      </div>
+      <ul class="hotel-hero__list-picture">
+        <!-- <li>
         <picture>
           <source
             media="(min-width: 768px)"
@@ -38,7 +44,7 @@
           />
         </picture>
       </li> -->
-      <!-- <li>
+        <!-- <li>
         <picture>
           <source
             media="(min-width: 768px)"
@@ -65,72 +71,78 @@
           />
         </picture>
       </li> -->
-     
-      <li>
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcset="
-              /src/images/hero-hotel/img1desk-tab436@1x.jpg   1x,
-              /src/images/hero-hotel/img1desk-tab872px@2x.jpg 2x
-            "
-            type="image/jpg"
-          />
-          <source
-            media="(max-width: 767px)"
-            srcset="/src/images/hero-hotel/img2phone250@1x.jpg 1x,
-            /src/images/hero-hotel/img2phone500@2x.jpg 2x
-            "
-            type="image/jpg"
-          />
-          <img
-            class="hotel__img"
-            src="/src/images/hero-hotel/img1phone250@1x.jpg"
-            alt="photo-1"
-            width="436"
-            height="580"
-          />
-        </picture>
-      </li>
-      
-      <li>
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="/src/images/hero-hotel/img3-half-desk235-@1x.jpg 1x,
-             /src/images/hero-hotel/img3-half-desk470-@2x.jpg 2x"
-            type="image/webp"
-          />
-         
-          <source
-            media="(min-width: 768px)"
-            srcset="/src/images/hero-hotel/img2half-tab264@1x.jpg 1x,
-            /src/images/hero-hotel/img2half-tab528@2x.jpg 2x"
-            type="image/webp"
-          />
-          
-          <source
-            media="(min-width: 320px)"
-            srcset="/src/images/hero-hotel/img1half-phone85-1x.jpg 1x,
-            /src/images/hero-hotel/img1half-phone170-2x.jpg 2x"
-            type="image/webp"
-          />
-          
-          <img
-            class="hotel__img"
-            src="/src/images/hero-hotel/img1half-phone85-1x.jpg"
-            alt="photo-2"
-            width="436"
-            height="580"
-          />
-        </picture>
-      </li>
-    </ul>
-  </div>
+
+        <li>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /src/images/hero-hotel/img1desk-tab436@1x.jpg   1x,
+                /src/images/hero-hotel/img1desk-tab872px@2x.jpg 2x
+              "
+              type="image/jpg"
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                /src/images/hero-hotel/img2phone250@1x.jpg 1x,
+                /src/images/hero-hotel/img2phone500@2x.jpg 2x
+              "
+              type="image/jpg"
+            />
+            <img
+              class="hotel__img"
+              src="/src/images/hero-hotel/img1phone250@1x.jpg"
+              alt="photo-1"
+              width="436"
+              height="580"
+            />
+          </picture>
+        </li>
+
+        <li>
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcset="
+                /src/images/hero-hotel/img3-half-desk235-@1x.jpg 1x,
+                /src/images/hero-hotel/img3-half-desk470-@2x.jpg 2x
+              "
+              type="image/webp"
+            />
+
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /src/images/hero-hotel/img2half-tab264@1x.jpg 1x,
+                /src/images/hero-hotel/img2half-tab528@2x.jpg 2x
+              "
+              type="image/webp"
+            />
+
+            <source
+              media="(min-width: 320px)"
+              srcset="
+                /src/images/hero-hotel/img1half-phone85-1x.jpg  1x,
+                /src/images/hero-hotel/img1half-phone170-2x.jpg 2x
+              "
+              type="image/webp"
+            />
+
+            <img
+              class="hotel__img"
+              src="/src/images/hero-hotel/img1half-phone85-1x.jpg"
+              alt="photo-2"
+              width="436"
+              height="580"
+            />
+          </picture>
+        </li>
+      </ul>
+    </div>
     <p class="hotel-hero__txt">
       Whether you're in the mood for a hearty breakfast, a light lunch, or a
       romantic dinner, our menu has something for everyone.
     </p>
- 
   </div>
 </section>

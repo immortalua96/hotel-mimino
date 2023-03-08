@@ -1,95 +1,47 @@
-@media screen and (max-width: 767px) {
-  .welcome-container {
-    max-width: 335px;
 
-    margin: 64px 0;
-  }
-  .welcome-complex__img {
-    min-width: 335px;
-  }
+.welcome-complex {
+   
+  
+  // .welcome-complex__title
 
-  .welcome-complex__p.welcome-p2 {
-    width: 335px;
-    padding: 32px 0;
-  }
-  .welcome-complex__p.welcome-p1 {
-    padding-top: 32px;
-    width: 306px;
-  }
-  .welcome-complex__title {
+  &__title {
+    margin-bottom: 32px;
+    
+    font-weight: 500;
     font-size: 32px;
     line-height: 1.12;
-    width: 335px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .welcome-complex__text {
-    display: flex;
-    padding-bottom: 40px;
-  }
-  .welcome-p1 {
-    width: 306px;
-
-    padding-right: 32px;
-  }
-  .welcome-p2 {
-    width: 366px;
-  }
-
-  .welcome-complex__title {
-    width: 434px;
-    font-size: 36px;
-    line-height: 1.11;
     letter-spacing: -0.02em;
-    padding-bottom: 50px;
+    text-transform: uppercase;
+  
+    color: #000000;}
+
+  // .welcome-complex__ind
+
+  &__ind {}
+
+  // .welcome-complex__p
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 32px;
   }
-  .welcome-container {
+  &__p {
+    font-weight: 400;
+      font-size: 14px;
+      line-height: 1.29;
     
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .welcome-container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    margin-left: 32px;
-  }
-  .welcome-complex__title {
-    width: 434px;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: -0.02em;
-    padding-bottom: 310px;
-  }
-  .welcome-complex__text {
-    width: 437px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    
+      color: #000000;
   }
 
-  .welcome-complex__info {
-    padding-left: 32px;
-  }
-  .welcome-p1 {
-    padding-bottom: 24px;
-  }
-}
-.welcome-complex__title {
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+  // .welcome-complex__img
 
-  color: #000000;
+  &__img {}
 }
-.welcome-complex__ind {
-  font-style: italic;
-}
-.welcome-complex__p {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
 
-  color: #000000;
-}
+.welcome-p1 {}
+
+.welcome-p2 {}

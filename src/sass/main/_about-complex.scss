@@ -69,7 +69,7 @@
   color: var(--text-color-secondary);
 }
 .room__description__restaurant {
-  width: 335px;
+  max-width: 335px;
   margin-bottom: 64px;
 
   @media screen and (min-width: 768px) {
