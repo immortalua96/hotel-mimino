@@ -1,4 +1,6 @@
 .header {
+  position: absolute;
+  width: 100%;
   border-bottom: 0.5px solid rgba(18, 18, 18, 0.3);
 }
 .header .container{
@@ -27,7 +29,7 @@
     line-height: calc(14 / 18);
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--text-color-primary);
+    color: var(--border-color-light);
   }
 
   .current.header_link::after {
@@ -82,7 +84,7 @@
   line-height: calc(22 / 14);
   letter-spacing: 0.18em;
   text-transform: uppercase;  
-  color: var(--text-color-primary);
+  color: var(--border-color-light);
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -98,7 +100,7 @@
     line-height: calc(8 / 6);
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--text-color-primary);
+    color: var(--border-color-light);
 
     @media screen and (min-width: 768px) {
       font-size: 8px;
@@ -118,7 +120,7 @@
 }
 
   .menu-toggle-icon {
-    stroke: var(--text-color-primary);
+    stroke: var(--border-color-light);
 }
 
 

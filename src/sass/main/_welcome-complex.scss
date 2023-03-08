@@ -1,7 +1,13 @@
 
 .welcome-complex {
    
-  
+&__flex{
+ @media screen and (min-width:1440px){
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 32px;
+ }
+}
   // .welcome-complex__title
 
   &__title {
@@ -13,7 +19,14 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
   
-    color: #000000;}
+    color: #000000;
+  @media screen and (min-width:768px){
+    width: 434px;
+    line-height: 1.1;
+    font-size: 36px;
+  }
+  
+  }
 
   // .welcome-complex__ind
 
@@ -25,6 +38,12 @@
     flex-direction: column;
     gap: 32px;
     margin-bottom: 32px;
+    @media screen and (min-width:768px) {
+        flex-direction: row;
+      }
+    @media screen and (min-width:1440px) {
+              flex-direction: column;
+            }
   }
   &__p {
     font-weight: 400;
@@ -35,13 +54,37 @@
       text-transform: uppercase;
     
       color: #000000;
+      @media screen and (min-width:768px) {
+         font-weight: 500;
+        }
+
   }
 
   // .welcome-complex__img
 
-  &__img {}
+  &__img {
+    @media screen and (min-width:768px) {
+      max-width: 704px;
+    }
+    
+  }
 }
 
-.welcome-p1 {}
+.welcome-p1 {
+  @media screen and (min-width:768px) {
+    width: 306px;
+  }
+  
+}
 
-.welcome-p2 {}
+.welcome-p2 {@media screen and (min-width:768px) {
+    width: 366px;
+  }}
+    .welcome-complex__gruop{
+      @media screen and (min-width:1440px) {
+        display: flex;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          align-content: space-between;
+      }
+    }
