@@ -1,35 +1,45 @@
 .complex__room__hotel {
   position: relative;
-
-  @media screen and (min-width: 1400px) {
+}
+@media screen and (min-width: 1400px) {
+  .complex__room__hotel {
     display: flex;
     align-items: center;
   }
 }
+
 .img__room__hotel {
   margin-bottom: 20px;
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .img__room__hotel {
     margin-bottom: 32px;
   }
-  @media screen and (min-width: 1400px) {
+}
+@media screen and (min-width: 1400px) {
+  .img__room__hotel {
     margin-bottom: 0;
   }
 }
+
 .img__bathroom__hotel {
   margin-bottom: 32px;
-
-  @media screen and (min-width: 768px) and (max-width: 1399px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .img__bathroom__hotel {
     position: absolute;
     top: 209px;
     right: 0;
   }
-  @media screen and (min-width: 1400px) {
+}
+@media screen and (min-width: 1400px) {
+  .img__bathroom__hotel {
     position: absolute;
     top: 209px;
     left: 300px;
   }
 }
+
 .about__complex__rewies {
   position: absolute;
   bottom: 375px;
@@ -42,16 +52,20 @@
   display: flex;
   align-items: center;
   padding: 0 14px;
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .about__complex__rewies {
     top: 176px;
     right: 122px;
   }
-  @media screen and (min-width: 1400px) {
+}
+@media screen and (min-width: 1400px) {
+  .about__complex__rewies {
     top: 176px;
     left: 370px;
   }
 }
+
 .rewies__text {
   display: flex;
   flex-direction: column;
@@ -62,34 +76,26 @@
   font-family: var(--font-primary);
   color: var(--text-color-secondary);
 }
+
 .rewies__rating__text {
   font-weight: 400;
   color: #575757;
 }
+
 .rewies__rating {
   color: var(--text-color-secondary);
 }
-.room__description__restaurant {
-  max-width: 335px;
-  margin-bottom: 64px;
 
-  @media screen and (min-width: 768px) {
-    width: 473px;
-    margin-bottom: 80px;
-  }
-  @media screen and (min-width: 1400px) {
-    margin-left: 364px;
-  }
-}
 .room__description__restaurant__title {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.18em;
-  color: var(--text-color-gray);
+  color: #484848;
   margin-bottom: 18px;
 }
+
 .room__description__restaurant__text {
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -97,47 +103,57 @@
   text-transform: uppercase;
   color: var(--text-color-primary);
   margin-bottom: 14px;
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .room__description__restaurant__text {
     font-size: 18px;
   }
 }
+
 .room__description__invitation__text {
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.28;
   text-transform: uppercase;
   color: var(--text-color-primary);
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .room__description__invitation__text {
     font-size: 18px;
   }
 }
+
 .about__complex__restaurant {
   position: relative;
 }
+
 .img__restaurant__hotel {
   margin-bottom: 54px;
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .img__restaurant__hotel {
     margin-left: auto;
     margin-bottom: 40px;
   }
 }
+
 .business__room__description {
   max-width: 268px;
   margin-bottom: 40px;
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .business__room__description {
     margin-left: 300px;
   }
 }
-.business-class-information {
-  @media screen and (min-width: 1400px) {
+
+@media screen and (min-width: 1400px) {
+  .business-class-information {
     position: absolute;
     bottom: 56px;
   }
 }
+
 .description__business__restaurant__text {
   font-family: var(--font-primary);
   font-weight: 500;
@@ -146,11 +162,13 @@
   text-transform: uppercase;
   color: var(--text-color-primary);
 }
-.img__business__restaurant {
-  @media screen and (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
+  .img__business__restaurant {
     margin-top: -175px;
   }
 }
+
 .about__complex__rewies__man {
   position: absolute;
   bottom: 510px;
@@ -163,13 +181,16 @@
   display: flex;
   align-items: center;
   padding: 0 14px;
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .about__complex__rewies__man {
     top: 303px;
     left: 60px;
   }
-  @media screen and (min-width: 1400px) {
+}
+@media screen and (min-width: 1400px) {
+  .about__complex__rewies__man {
     top: 303px;
     left: 695px;
   }
-}
+}/*# sourceMappingURL=_about-complex.css.map */

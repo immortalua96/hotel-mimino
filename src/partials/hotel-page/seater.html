@@ -1,4 +1,4 @@
-<!-- luxery -->
+<!-- seater -->
 <section class="section">
   <div class="container">
     <ul class="room__img__list list room__img__list__tab__seater">
@@ -34,7 +34,7 @@
       </li>
       <li>
         <div class="div__img__room">
-          <ul class="ul__img__room">
+          <ul class="ul__img__room ul__img__room__tab__seater">
             <li class="bathroom__img__item">
               <picture>
                 <source
@@ -59,7 +59,7 @@
                   "
                 />
                 <img
-                  class="bathroom__laxury__room__img"
+                  class="bathroom__laxury__room__img bathroom__luxery-img"
                   src="/src/images/four-seater-room/imgfour-seater-room-mob@1x-1.jpg"
                   alt="bathroom"
                 />
@@ -106,7 +106,7 @@
                   "
                 />
                 <img
-                  class="kitchen__luxery__room__img"
+                  class="kitchen__luxery__room__img bathroom__img kitchen__img"
                   src="/src/images/four-seater-room/imgfour-seater-room-mob@1x-2.jpg"
                   alt="kitchen"
                 />
@@ -129,9 +129,15 @@
       </div>
 
       <div class="btn__room btn__room__bias">
-        <button class="btn__more__details" type="button">MORE DETALIS</button>
+        <a class="btn__more__details" href="./room.html">MORE DETAILS</a>
 
-        <button class="btn__view__prices" type="button">VIEW PRICES</button>
+        <button
+          class="btn__view__prices js-open-modal"
+          data-modal="modal-price"
+          type="button"
+        >
+          VIEW PRICES
+        </button>
       </div>
     </div>
   </div>
