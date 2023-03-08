@@ -1,0 +1,32 @@
+
+/* tablet screen */
+@media screen and (min-width: 768px) {
+   .double__room__item__1__2{
+max-width: 355px;
+}
+}
+/* tablet screen */
+@media screen and (min-width: 768px) {
+    .double__room__item__2__2 {
+        max-width: 299px;
+    }
+}
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+    .btn__room__triple__1 {
+        display: none;
+    }
+}
+/* desctop screen */
+@media screen and (max-width: 1440px) {
+    .btn__room__triple__2 {
+        display: none;
+    }
+}
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+    .btn__room__triple__2
+    {
+    margin-right: auto;
+}
+}

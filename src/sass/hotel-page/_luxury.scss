@@ -8,16 +8,22 @@
  display: flex;
  gap: 19px;
 }
-
 /* tablet screen */
 @media screen and (min-width: 768px) {
+.ul__img__room {
+    // flex-direction: column;
+}
+}
+/* tablet screen */
+@media screen and (min-width: 768px) and (max-width:1439px) {
    .room__img__list  {
     display: flex;
    }
 }
 /* desctop screen */
-@media screen and (min-width: 1200px) {
-    .room__img__list {justify-content: space-around;}
+@media screen and (min-width: 1440px) {
+    .room__img__list {
+    max-width:max-content}
 }
 
 .list {}
@@ -28,14 +34,33 @@
     margin-top: 20px;
     margin-bottom: 32px;
 }
+/* tablet screen */
+@media screen and (min-width: 768px) {
+.div__img__room {
+    margin-top: 0;
+    gap: 32px;
+}
+}
+
+
+
 /* desctop screen */
 @media screen and (min-width: 1440px) {
    .room__img__item   {
     display: none;
    }
 }
-
-.luxery__room__img {}
+/* tablet screen */
+@media screen and (min-width: 768px) {
+   .luxery__room__img {
+    max-width:max-content;}
+}
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+    .luxery__room__img {
+        max-width: 100%;
+    }
+}
 
 /* desctop screen */
 @media screen and (min-width: 1200px) {
@@ -45,10 +70,13 @@
    }
 }
 
-
+/* tablet screen */
+@media screen and (min-width: 768px) {
 .bathroom__laxury__room__img {
-
+max-width: max-content;
 }
+}
+
 /* desctop screen */
 @media screen and (min-width: 1200px) {
      .kitchen__img__item{
@@ -57,8 +85,11 @@
     }
 }
  
+/* tablet screen */
+@media screen and (min-width: 768px) {
+.kitchen__luxery__room__img {max-width: max-content;}
+}
 
-.kitchen__luxery__room__img {}
 
 .double__luxury__room {
 margin-bottom: 32px;
@@ -71,9 +102,39 @@ font-family:var(--font-primary);
     color: var(--text-color-primary);
 }
 
-.double__room__list {}
+/* tablet screen */
+@media screen and (min-width: 768px) {
+    .double__luxury__room{ margin-top: 40px;
+    
+        font-size: 40px;
+        line-height: calc(44/40);}
+}
 
-.double__room__item__1 {}
+/* desctop screen */
+@media screen and (min-width:1440px) {
+    .double__luxury__room {
+        margin-top: 50px;
+    }
+}
+
+
+/* tablet screen */
+@media screen and (min-width: 768px) {
+.double__room__list {display: flex;
+gap: 32px;}
+}
+
+/* tablet screen */
+@media screen and (min-width: 768px) {
+
+.double__room__item__1__1 {max-width: 369px;}
+}
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+.double__room__item__1__1 {
+    max-width: 355px;
+}
+}
 
 .double__room__text {
     text-transform: uppercase;
@@ -84,11 +145,45 @@ font-family:var(--font-primary);
         letter-spacing: -0.02em;
     color: var(--text-color-primary);
 }
-
-.double__room__item__2 {
-    margin-top: 24px;
+/* desctop screen */
+@media screen and (min-width: 768px) {
+.double__room__text {
+    font-size: 18px;
+    line-height: calc(24/18);
+}
+}
+/* phone screen */
+.double__room__text__seater {
+    text-transform: uppercase;
+    font-family:var(--font-primary);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
 }
 
+/* tablet screen */
+@media screen and (min-width: 768px) {
+.double__room__text__seater {font-size: 18px;
+        line-height: calc(24/18);}
+}
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+    .double__room__text__seater {
+        width: 475px;
+        
+    }
+}
+.double__room__item__2__1 {
+    margin-top: 24px;
+}
+/* tablet screen */
+@media screen and (min-width: 768px) {
+    .double__room__item__2__1 {
+        margin-top: 0;
+        max-width: 299px;
+    }
+}
 .btn__more__details {
         font-family: var(--font-primary);
             letter-spacing: -.02em;
@@ -103,6 +198,14 @@ font-family:var(--font-primary);
             font-weight: 400;
             line-height: 1.29;
         }
+
+         /* desctop screen */
+         @media screen and (min-width: 1440px) {
+        .btn__more__details {
+            max-height: 42px;
+            min-width: 152px;
+        }
+         }
 
 .btn__more__details:hover{
     background-color: #121212;
@@ -136,6 +239,13 @@ background-color: #121212;
             line-height: 1.29;
             
         }
+         /* desctop screen */
+         @media screen and (min-width: 1440px) {
+             .btn__view__prices {
+                 max-height: 42px;
+                 min-width: 152px;
+             }
+         }
 .btn__view__prices:hover {
     background-color: #121212;
     border: 0.8px solid #F7F7F7;
@@ -153,7 +263,20 @@ background-color: #121212;
 .btn__room{
     gap: 18px;
     display: flex;
-    justify-content: flex-end;}
+    
+}
+/* tablet screen */
+@media screen and (min-width: 768px) {
+    .btn__room__bias {
+        display: flex;
+        justify-content: flex-end;}
+}
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+    .btn__room__bias {
+        margin-left: auto;}
+}
+
 
 /* desctop screen */
 @media screen and (max-width: 1439px) {
@@ -162,3 +285,64 @@ display: none;
 
    }
 }
+/* desctop screen */
+@media screen and (min-width: 1440px) {
+    .double__luxury__room__btn {
+        display: flex;
+    }
+}
+/* desctop screen */
+@media screen and (max-width: 1440px) {
+.double__luxury__room__div {
+ margin-left: auto;
+ }
+}
+// /* tablet screen */
+// @media screen and (min-width: 768px)and (max-width: 1439px) {
+// .room__img__list__tab__luxery {
+//         flex-direction: row-reverse;
+// }
+// }
+
+// /* desctop screen */
+// @media screen and (min-width: 1440px) {
+// .room__img__list__tab__luxery {
+
+// }
+// }
+// /* tablet screen */
+// @media screen and (min-width: 768px) {
+// .ul__img__room__tab__luxery {
+//     flex-direction: column;
+// }
+// }
+
+// /* desctop screen */
+// @media screen and (min-width: 1440px) {
+//  .ul__img__room__tab__luxery {}
+// }
+
+
+
+
+
+
+
+// /* tablet screen */
+// @media screen and (min-width: 768px) {
+//     .room__img__list__tab__triple {}
+// }
+
+// /* desctop screen */
+// @media screen and (min-width: 1440px) {
+//     .room__img__list__tab__triple {}
+// }
+// /* tablet screen */
+// @media screen and (min-width: 768px) {
+//     .room__img__list__tab__seater {}
+// }
+
+// /* desctop screen */
+// @media screen and (min-width: 1440px) {
+//     .room__img__list__tab__seater {}
+// }
