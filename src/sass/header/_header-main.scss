@@ -3,6 +3,9 @@
   width: 100%;
   border-bottom: 0.5px solid rgba(18, 18, 18, 0.3);
 }
+.header.header_hotel{
+  position: static;
+}
 .header .container{
   display: flex;
   align-items: center;
@@ -108,6 +111,9 @@
     line-height: calc(24 / 20);
     }
   }
+    .logo_link.logo_link--darck {
+      color: var(--border-color-dark)
+    }
 
 
 
@@ -124,7 +130,9 @@
       line-height: calc(10 / 8);
     }
   }
-
+.logo_text.logo_text--darck{
+  color: var(--border-color-dark);
+}
 
   .menu-toggle {
     background-color: transparent;
@@ -139,7 +147,9 @@
   .menu-toggle-icon {
     stroke: var(--border-color-light);
 }
-
+.menu-toggle-icon.menu-toggle-icon--dark {
+  stroke: var(--border-color-dark);
+}
 
 // =============mobile style=================
 .menu-close-btn {
