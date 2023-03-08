@@ -3,7 +3,7 @@
 $(document).ready(function () {
   $('.slider-rest-details').slick({
     // Кількість слайдів
-    slidesToShow: 1,
+    slidesToShow: 5,
     //   Швидкість перемикання
     speed: 800,
     // Безкінечність повторення
