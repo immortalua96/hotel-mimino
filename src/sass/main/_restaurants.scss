@@ -7,7 +7,6 @@
 /* Mobile */
 
 @media screen and (max-width: 768px) {
- 
   .rest-details-title {
     font-family: var(--font-primary);
     font-style: normal;
@@ -41,7 +40,7 @@
   }
 
   .rest-details-btn-low-wrap {
-    margin-top:  55px;;
+    margin-top: 55px;
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -79,6 +78,7 @@
 
   .rest-details-btn:is(:hover, :focus) {
     background-color: var(--bg-color-dark);
+    color: var(--bg-color-light);
     border: none;
   }
 
@@ -137,6 +137,7 @@
 
   .rest-details-btn-low-wrap {
     margin-bottom: 64px;
+    margin-top: 55px;
     display: flex;
     justify-content: center;
     gap: 14px;
@@ -156,6 +157,9 @@
   }
 
   .rest-details-btn-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     font-family: var(--font-primary);
     font-style: normal;
@@ -170,6 +174,7 @@
 
   .rest-details-btn:is(:hover, :focus) {
     background-color: var(--bg-color-dark);
+    color: var(--bg-color-light);
     border: none;
   }
 
@@ -208,6 +213,9 @@
   }
 
   .rest-details-btn-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     font-size: 18px;
     line-height: 1.33;
