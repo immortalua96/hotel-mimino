@@ -9,12 +9,12 @@ $(document).ready(function () {
     // Безкінечність повторення
     infinite: true,
     // Автоплей
-    autoplay: true,
+    autoplay: false,
     // Зупинка при ховері та фокусі
     pauseOnHover: true,
     pauseOnFocus: true,
     // Перемикання анімації по швидкості натискання на кнопку
-    waitForAnimate: false,
+    waitForAnimate: true,
     // Центральне позиціювання головного слайду
     centerMode: true,
     // Розриви між слайдами в ширину
