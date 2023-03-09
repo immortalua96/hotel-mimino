@@ -237,5 +237,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
     background-color: $border-color-dark;
     border: 0.8px solid $border-color-light;
     border-radius: 32px;
+
+    transition: all var(--animation-for-hover);
+
+    &:hover {
+      background-color: $border-color-light;
+      color: $text-color-primary;
+    }
   }
 }
