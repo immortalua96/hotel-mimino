@@ -1,9 +1,10 @@
 .complex__room__hotel {
   position: relative;
 
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     align-items: center;
+    margin-bottom: 100px;
   }
 }
 .img__room__hotel {
@@ -12,7 +13,7 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 32px;
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1440px) {
     margin-bottom: 0;
   }
 }
@@ -24,7 +25,7 @@
     top: 209px;
     right: 0;
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1440px) {
     position: absolute;
     top: 209px;
     left: 300px;
@@ -47,7 +48,7 @@
     top: 176px;
     right: 122px;
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1440px) {
     top: 176px;
     left: 370px;
   }
@@ -70,14 +71,13 @@
   color: var(--text-color-secondary);
 }
 .room__description__restaurant {
-  max-width: 335px;
   margin-bottom: 64px;
 
   @media screen and (min-width: 768px) {
     width: 473px;
     margin-bottom: 80px;
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1440px) {
     margin-left: 364px;
   }
 }
@@ -115,6 +115,12 @@
 }
 .about__complex__restaurant {
   position: relative;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 82px;
+    align-items: center;
+  }
 }
 .img__restaurant__hotel {
   margin-bottom: 54px;
@@ -129,13 +135,18 @@
   margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
-    margin-left: 300px;
   }
 }
 .business-class-information {
-  @media screen and (min-width: 1400px) {
-    position: absolute;
-    bottom: 56px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 54px;
+    margin-left: 176px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1440px) {
+    margin: 0;
+    justify-content: left;
   }
 }
 .description__business__restaurant__text {
@@ -145,11 +156,7 @@
   line-height: 1.28;
   text-transform: uppercase;
   color: var(--text-color-primary);
-}
-.img__business__restaurant {
-  @media screen and (min-width: 768px) {
-    margin-top: -175px;
-  }
+  font-size: 14px;
 }
 .about__complex__rewies__man {
   position: absolute;
@@ -168,7 +175,7 @@
     top: 303px;
     left: 60px;
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1440px) {
     top: 303px;
     left: 695px;
   }
