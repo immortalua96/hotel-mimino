@@ -678,7 +678,8 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .room__description__restaurant {
-    margin-left: 364px;
+    margin-left: auto;
+    margin-right: 57px;
   }
 }
 
@@ -2805,13 +2806,11 @@ body {
 
 .slider__room .slick-arrow.slick-prev {
   background-image: url(/src/images/icon/sl-arrow_l.svg);
-  background-size: 25px 20px;
   padding: 11px;
 }
 
 .slider__room .slick-arrow.slick-next {
   background-image: url(/src/images/icon/sl-arrow_r.svg);
-  background-size: 30px 20px;
   left: 120px;
   padding: 11px;
 }
