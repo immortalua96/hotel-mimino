@@ -1,139 +1,250 @@
-.location__section{
-    padding-top: 64px;
-    padding-bottom: 64px;
+// .location__section {
+//   padding-top: 64px;
+//   padding-bottom: 64px;
+//   position: relative;
+// }
+// @media screen and (min-width: 768px) {
+//   .location__section {
+//     padding-top: 80px;
+//     padding-bottom: 80px;
+//   }
+// }
+// @media screen and (min-width: 1440px) {
+//   .location__section {
+//     padding-top: 100px;
+//     padding-bottom: 100px;
+//   }
+// }
+// .location {
+//   font-weight: 500;
+//   font-size: 40px;
+//   line-height: 1;
+//   letter-spacing: -0.02em;
+//   text-transform: uppercase;
+//   color: #121212;
+// }
+// @media screen and (min-width: 1440px) {
+//   .location {
+//     position: absolute;
+//     left: 815px;
+//     top: 100px;
+//   }
+// }
+
+// .location__maps {
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: 32px;
+//   width: 100%;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .location__maps {
+//     margin-top: 40px;
+//   }
+// }
+// @media screen and (min-width: 1440px) {
+//   .location__maps {
+//     flex-direction: row;
+//     gap: 32px;
+//     margin-top: 0px;
+//   }
+// }
+// .maps {
+//   box-shadow: -14px 24px 68px -16px rgba(0, 0, 0, 0.12);
+//   width: 95%;
+// }
+// @media screen and (min-width: 768px) {
+//   .maps {
+//     width: 704px;
+//     height: 576px;
+//   }
+// }
+// @media screen and (min-width: 1440px) {
+//   .maps {
+//     width: 640px;
+//     height: 524px;
+//   }
+// }
+// .location__first {
+//   margin-top: 32px;
+// }
+// @media screen and (min-width: 768px) {
+//   .location__first {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+// }
+// @media screen and (min-width: 1440px) {
+//   .location__first {
+//     justify-content: center;
+//     gap: 70px;
+//     margin-top: 0px;
+//     align-items: flex-end;
+//   }
+// }
+// .location__nav {
+//   font-weight: 400;
+//   font-size: 18px;
+//   line-height: 1.33;
+//   letter-spacing: -0.02em;
+//   text-transform: uppercase;
+
+//   color: #000000;
+// }
+// .location__second {
+//   margin-top: 28px;
+// }
+// @media screen and (min-width: 768px) {
+//   .location__second {
+//     margin-top: 0px;
+//   }
+// }
+// @media screen and (min-width: 1440px) {
+//   .location__second {
+//     display: flex;
+//     gap: 12px;
+//   }
+// }
+// .call__us {
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.29;
+//   letter-spacing: -0.02em;
+//   text-transform: uppercase;
+//   margin-bottom: 12px;
+//   color: #121212;
+// }
+// @media screen and (min-width: 1440px) {
+//   .call__us {
+//     margin-bottom: 0px;
+//   }
+// }
+// .contacts__list {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 4px;
+// }
+// @media screen and (min-width: 768px) {
+//   .contacts__list {
+//     gap: 2px;
+//   }
+// }
+// .location__number {
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 1.29;
+//   letter-spacing: -0.02em;
+//   color: #121212;
+// }
+
+.location {
+  &__wrap {
     position: relative;
-}
-@media screen and (min-width: 768px){
-    .location__section{
-        padding-top: 80px;
-        padding-bottom: 80px;
+
+    @include screen(desktop) {
+      height: 524px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-}
-@media screen and (min-width: 1440px){
-    .location__section{
-        padding-top: 100px;
-    padding-bottom: 100px;
-    }
-}
-.location{
+  }
+
+  &__title {
     font-weight: 500;
-font-size: 40px;
-line-height: 1;
-letter-spacing: -0.02em;
-text-transform: uppercase;
-color: #121212;
-} 
-@media screen and (min-width: 1440px) {
-    .location{
-        position: absolute;
-    left: 704px;
-    top: 100px;
-    }
-}
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
 
-.location__maps{
-    display: flex;
-    flex-direction: column;
-    margin-top: 32px;
-    width: 100%;
-    
-}
+    @include screen(tablet) {
+      font-size: 68px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 40px;
+    }
 
-@media screen and (min-width: 768px){
-    .location__maps{
-        margin-top: 40px;
+    @include screen(desktop) {
+      margin-left: 706px;
     }
-}
-@media screen and (min-width: 1440px){
-    .location__maps{
-        flex-direction: row;
-        gap: 32px;
-        margin-top: 0px;
+  }
+
+  &__map-wrap {
+    margin-bottom: 32px;
+
+    @include screen(desktop) {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
-}
-.maps{
+  }
+
+  &__map {
     box-shadow: -14px 24px 68px -16px rgba(0, 0, 0, 0.12);
-    width: 95%;
-}
-@media screen and (min-width: 768px){
-    .maps{
-        width: 704px;
-        height: 576px;
-    }}
-    @media screen and (min-width: 1440px){
-        .maps{
-            width: 640px;
-            height: 524px;
-        }}
-.location__first {
-    margin-top: 32px;
-    
-}
-@media screen and (min-width: 768px){
-    .location__first{
-        display: flex;
-        justify-content: space-between;
-    }
-}
-@media screen and (min-width: 1440px){
-    .location__first{
-        justify-content: center;
-        gap: 70px;
-        margin-top: 0px;
-        align-items: flex-end;
-    }
-}
-.location__nav {
-    font-weight: 400;
-font-size: 18px;
-line-height: 1.33;
-letter-spacing: -0.02em;
-text-transform: uppercase;
+    width: 100%;
 
-color: #000000;
-}
-.location__second{
-    margin-top: 28px;
-}
-@media screen and (min-width: 768px){
-    .location__second{
-        margin-top: 0px;
+    @include screen(tablet) {
+      width: 704px;
+      height: 576px;
     }
-}
-@media screen and (min-width: 1440px){
-    .location__second{
-        display: flex;
-        gap: 12px;
+
+    @include screen(desktop) {
+      width: 640px;
+      height: 524px;
     }
-}
-.call__us {
-    font-weight: 500;
-font-size: 14px;
-line-height: 1.29;
-letter-spacing: -0.02em;
-text-transform: uppercase;
-margin-bottom: 12px;
-color: #121212;
-}
-@media screen and (min-width: 1440px){
-    .call__us{
-        margin-bottom: 0px;
+  }
+
+  &__contacts-wrap {
+    @include screen(tablet) {
+      display: flex;
+      justify-content: space-between;
     }
-}
-.contacts__list {
+
+    @include screen(desktop) {
+      margin-left: 706px;
+      justify-content: left;
+      gap: 70px;
+    }
+  }
+
+  &__address {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+
+    @include screen(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__address-wrap {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    gap: 12px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
 }
-@media screen and (min-width: 768px){
-    .contacts__list{
-        gap: 2px;
+
+.contacts {
+  &__link {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+
+    @include screen(tablet) {
+      font-size: 18px;
+      line-height: 1.29;
+      letter-spacing: -0.02em;
     }
-}
-.location__number {
-    font-weight: 400;
-font-size: 14px;
-line-height: 1.29;
-letter-spacing: -0.02em;
-color: #121212;
+  }
 }
