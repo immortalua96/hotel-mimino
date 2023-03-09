@@ -3,18 +3,18 @@
 $(document).ready(function () {
   $('.slider-rest-details').slick({
     // Кількість слайдів
-    slidesToShow: 5,
+    slidesToShow: 1,
     //   Швидкість перемикання
     speed: 800,
     // Безкінечність повторення
     infinite: true,
     // Автоплей
-    autoplay: true,
+    autoplay: false,
     // Зупинка при ховері та фокусі
     pauseOnHover: true,
     pauseOnFocus: true,
     // Перемикання анімації по швидкості натискання на кнопку
-    waitForAnimate: false,
+    waitForAnimate: true,
     // Центральне позиціювання головного слайду
     centerMode: true,
     // Розриви між слайдами в ширину
@@ -30,6 +30,36 @@ $(document).ready(function () {
     // ],
   });
 });
+// $(document).ready(function () {
+//   $('.slider-rest-details').slick({
+//     // Кількість слайдів
+//     slidesToShow: 5,
+//     //   Швидкість перемикання
+//     speed: 800,
+//     // Безкінечність повторення
+//     infinite: true,
+//     // Автоплей
+//     autoplay: true,
+//     // Зупинка при ховері та фокусі
+//     pauseOnHover: true,
+//     pauseOnFocus: true,
+//     // Перемикання анімації по швидкості натискання на кнопку
+//     waitForAnimate: false,
+//     // Центральне позиціювання головного слайду
+//     centerMode: true,
+//     // Розриви між слайдами в ширину
+//     variableWidth: true,
+//     // Перший телефон
+//     mobileFirst: true,
+//     // Адаптивність (в сеттінг пипшемо функцію і значення)
+//     // responsive: [
+//     //   {
+//     //     breakpoint: 1440,
+//     //     settings: {},
+//     //   },
+//     // ],
+//   });
+// });
 
 // $(document).ready(function () {
 //   $('.slider-rest-details').slick({
