@@ -221,13 +221,14 @@
 }
 
 .mob-header_media-bottom {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   position: absolute;
   bottom: 24px;
   left: 20px;
-
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+ 
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -245,7 +246,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   background-color: var(--text-color-primary);
   z-index: 999;
   transform: translateX(100%);
@@ -264,10 +265,13 @@
 }
 
 .mobile-menu-wrapper {
-  padding: 128px 100px 470px;
+  padding-top: 128px;
+  display: flex;
+  flex-direction: column;
+ 
 
   @media screen and (min-width: 768px) {
-    padding: 240px 100px 530px;
+    padding-top: 240px;
   }
 }
 
